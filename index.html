@@ -250,7 +250,6 @@
         .btn-outline:hover { background: var(--accent); color: var(--bg); }
         .lang-fade { transition: opacity 0.25s ease; }
         .lang-fade.fading { opacity: 0; }
-        /* BACK TO TOP */
         .back-to-top {
             position: fixed;
             bottom: 24px;
@@ -347,7 +346,8 @@
         .project-image { aspect-ratio: 16/10; background: linear-gradient(135deg, #1a2620, #0f1410); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
         .project-image svg { width: 80px; height: 80px; opacity: 0.3; transition: all 0.4s ease; stroke: var(--accent); }
         .project-card:hover .project-image svg { opacity: 1; transform: scale(1.1); }
-        .project-number { position: absolute; top: 12px; left: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); z-index: 2; }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+        .project-number { position: absolute; top: 12px; left: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); z-index: 2; background: rgba(10, 14, 10, 0.7); padding: 2px 8px; border-radius: 2px; }
         .project-body { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; }
         .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
         .project-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); padding: 4px 10px; border: 1px solid var(--border); background: rgba(0, 255, 157, 0.05); text-transform: uppercase; letter-spacing: 0.5px; }
@@ -602,24 +602,36 @@
             <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="работы" data-en="works">работы</span></h2>
             <div class="portfolio-grid">
                 <div class="project-card">
-                    <div class="project-image"><span class="project-number">// 01</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0 0c-3.5 0-6-2.5-6-6s2.5-6 6-6 6 2.5 6 6-2.5 6-6 6z"/></svg></div>
+                    <div class="project-image">
+                        <span class="project-number">// 01</span>
+                        <img src="portfolio-psy.png" alt="Сайт психолога" loading="lazy">
+                    </div>
                     <div class="project-body">
                         <div class="project-tags"><span class="project-tag" data-ru="сайт" data-en="site">сайт</span><span class="project-tag">n8n</span><span class="project-tag" data-ru="AI-бот" data-en="AI bot">AI-бот</span><span class="project-tag">Airtable</span></div>
                         <h3 data-ru="Сайт психолога + AI-бот" data-en="Psychologist website + AI bot">Сайт психолога + AI-бот</h3>
-                        <p class="project-desc" data-ru="Лендинг с формой заявок + Telegram-бот с AI-агентом." data-en="Landing page with a request form + Telegram bot with an AI agent.">Лендинг с формой заявок + Telegram-бот с AI-агентом.</p>
+                        <p class="project-desc" data-ru="Лендинг с формой заявок + Telegram-бот с AI-агентом, который собирает данные клиентов." data-en="Landing page with a request form + Telegram bot with an AI agent that collects client data.">Лендинг с формой заявок + Telegram-бот с AI-агентом, который собирает данные клиентов.</p>
                         <a href="https://vanek2111.github.io/sitepsy/" target="_blank" class="project-link" data-ru="Посмотреть проект" data-en="View project">Посмотреть проект</a>
                     </div>
                 </div>
                 <div class="project-card placeholder">
-                    <div class="project-image"><span class="project-number">// 02</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                    <div class="project-image">
+                        <span class="project-number">// 02</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
                     <div class="project-body"><div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div><h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3><p class="project-desc" data-ru="Здесь будет следующий кейс." data-en="The next case will be here.">Здесь будет следующий кейс.</p></div>
                 </div>
                 <div class="project-card placeholder">
-                    <div class="project-image"><span class="project-number">// 03</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                    <div class="project-image">
+                        <span class="project-number">// 03</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
                     <div class="project-body"><div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div><h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3><p class="project-desc" data-ru="Здесь будет следующий кейс." data-en="The next case will be here.">Здесь будет следующий кейс.</p></div>
                 </div>
                 <div class="project-card placeholder">
-                    <div class="project-image"><span class="project-number">// 04</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg></div>
+                    <div class="project-image">
+                        <span class="project-number">// 04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    </div>
                     <div class="project-body"><div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div><h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3><p class="project-desc" data-ru="Здесь будет следующий кейс." data-en="The next case will be here.">Здесь будет следующий кейс.</p></div>
                 </div>
             </div>
@@ -755,7 +767,6 @@
         });
         setLanguage(currentLang);
 
-        // БУРГЕР
         const burger = document.getElementById('burger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuClose = document.getElementById('mobileMenuClose');
@@ -777,7 +788,6 @@
         menuOverlay.addEventListener('click', closeMenu);
         mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 
-        // ПРОГРЕСС
         const progressBar = document.getElementById('progressBar');
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY;
@@ -785,18 +795,15 @@
             progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
         });
 
-        // NAVBAR
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
-        // BACK TO TOP
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('show', window.scrollY > 400);
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // REVEAL
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -804,7 +811,6 @@
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // FAQ
         document.querySelectorAll('.faq-question').forEach(q => {
             q.addEventListener('click', () => {
                 const item = q.parentElement;
