@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vanekdev — Автоматизация на n8n + AI</title>
+    <meta name="description" content="Автоматизация бизнеса на n8n: сайты под ключ, Telegram-боты с AI, интеграции с CRM и базами данных. Работаю быстро, чётко и по делу.">
+    <meta name="keywords" content="n8n, автоматизация, Telegram-бот, AI-агент, сайт под ключ, Airtable, Supabase">
+    <meta property="og:title" content="vanekdev — Автоматизация на n8n + AI">
+    <meta property="og:description" content="Помогаю малому бизнесу избавиться от рутины. Сайты, боты, автоматизация.">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -380,17 +385,9 @@
             font-size: 10px;
             letter-spacing: 4px;
         }
-        .terminal-line {
-            display: block;
-            padding-top: 6px;
-        }
-        .terminal-line .prompt {
-            color: var(--accent);
-            margin-right: 8px;
-        }
-        .terminal-line .cmd {
-            color: var(--text);
-        }
+        .terminal-line { display: block; padding-top: 6px; }
+        .terminal-line .prompt { color: var(--accent); margin-right: 8px; }
+        .terminal-line .cmd { color: var(--text); }
         .terminal-line .out {
             color: var(--text-muted);
             display: block;
@@ -501,10 +498,7 @@
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        .about-text p strong {
-            color: var(--text);
-            font-weight: 600;
-        }
+        .about-text p strong { color: var(--text); font-weight: 600; }
 
         /* SKILLS */
         .skills-grid {
@@ -534,6 +528,45 @@
             border-color: var(--accent);
             color: var(--text);
             transform: translateX(4px);
+        }
+
+        /* PROCESS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            position: relative;
+        }
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .process-step:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .process-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        .process-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .process-step p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
         /* PORTFOLIO */
@@ -644,9 +677,7 @@
             cursor: default;
             pointer-events: none;
         }
-        .project-card.placeholder .project-image svg {
-            opacity: 0.15;
-        }
+        .project-card.placeholder .project-image svg { opacity: 0.15; }
         .project-card.placeholder::after {
             content: 'СКОРО';
             position: absolute;
@@ -716,6 +747,150 @@
             color: var(--accent);
         }
 
+        /* TECH STACK */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+        }
+        .tech-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 24px 16px;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .tech-item:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .tech-icon {
+            width: 32px;
+            height: 32px;
+            stroke: var(--accent);
+            opacity: 0.7;
+        }
+
+        /* REVIEWS */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 32px 28px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 64px;
+            color: var(--accent);
+            opacity: 0.15;
+            line-height: 1;
+        }
+        .review-stars {
+            color: var(--accent);
+            font-size: 14px;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+        .review-text {
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .review-author {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--accent);
+        }
+        .review-role {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* FAQ */
+        .faq-list { max-width: 900px; margin: 0 auto; }
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover { border-color: var(--accent); }
+        .faq-question {
+            padding: 24px 28px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            user-select: none;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .faq-question::before {
+            content: '? ';
+            color: var(--accent);
+            margin-right: 8px;
+        }
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .faq-item.active .faq-toggle {
+            background: var(--accent);
+            color: var(--bg);
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 28px;
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 0 28px 24px;
+        }
+
         /* CONTACTS */
         .contacts-grid {
             display: grid;
@@ -753,6 +928,38 @@
         .contact-hint {
             font-size: 13px;
             color: var(--text-muted);
+        }
+
+        /* FLOATING TELEGRAM */
+        .tg-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 998;
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
+            transition: all 0.3s ease;
+            animation: floatPulse 2s infinite;
+        }
+        .tg-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(0, 255, 157, 0.8);
+        }
+        .tg-float svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--bg);
+            margin-right: -2px;
+        }
+        @keyframes floatPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 157, 0.5); }
+            50% { box-shadow: 0 0 50px rgba(0, 255, 157, 0.8); }
         }
 
         /* FOOTER */
@@ -793,12 +1000,22 @@
             .portfolio-grid { grid-template-columns: 1fr; }
             .services-grid { grid-template-columns: 1fr; }
             .contacts-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
             
             .hero-buttons { flex-direction: column; }
             .hero-buttons .btn { width: 100%; text-align: center; }
             
             .about-card { padding: 30px 24px; }
             .about-avatar { width: 90px; height: 90px; font-size: 36px; }
+            
+            .faq-question { padding: 20px; font-size: 14px; }
+            .faq-answer { padding: 0 20px; font-size: 14px; }
+            .faq-item.active .faq-answer { padding: 0 20px 20px; }
+            
+            .tg-float { bottom: 16px; right: 16px; width: 54px; height: 54px; }
+            .tg-float svg { width: 24px; height: 24px; }
         }
     </style>
 </head>
@@ -813,8 +1030,10 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#about">about</a></li>
+                <li><a href="#process">process</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
                 <li><a href="#services">services</a></li>
+                <li><a href="#reviews">reviews</a></li>
                 <li><a href="#contacts">contacts</a></li>
             </ul>
             <button class="burger" id="burger" aria-label="Меню">
@@ -834,8 +1053,10 @@
         </div>
         <nav class="mobile-menu-nav">
             <a href="#about">about</a>
+            <a href="#process">process</a>
             <a href="#portfolio">portfolio</a>
             <a href="#services">services</a>
+            <a href="#reviews">reviews</a>
             <a href="#contacts">contacts</a>
         </nav>
         <div class="mobile-menu-footer">
@@ -936,14 +1157,48 @@
         </div>
     </section>
 
+    <!-- PROCESS -->
+    <section id="process" class="reveal">
+        <div class="container">
+            <span class="section-tag">02 / process</span>
+            <h2>Как я <span class="accent">работаю</span></h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3>Заявка</h3>
+                    <p>Ты пишешь в Telegram или на email. Рассказываешь, какая задача.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3>Обсуждение</h3>
+                    <p>Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3>Прототип</h3>
+                    <p>Показываю черновик (макет, схему бота, workflow). Вносим правки.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3>Реализация</h3>
+                    <p>Делаю проект. Держу в курсе на каждом этапе. Показываю промежуточные результаты.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <h3>Сдача</h3>
+                    <p>Передаю проект, объясняю, как пользоваться. Помогаю с запуском. Гарантия 30 дней.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PORTFOLIO -->
     <section id="portfolio" class="reveal">
         <div class="container">
-            <span class="section-tag">02 / portfolio</span>
+            <span class="section-tag">03 / portfolio</span>
             <h2>Мои <span class="accent">работы</span></h2>
             <div class="portfolio-grid">
                 
-                <!-- Проект 1: Сайт психолога -->
                 <div class="project-card">
                     <div class="project-image">
                         <span class="project-number">// 01</span>
@@ -964,7 +1219,6 @@
                     </div>
                 </div>
 
-                <!-- Проект 2: placeholder -->
                 <div class="project-card placeholder">
                     <div class="project-image">
                         <span class="project-number">// 02</span>
@@ -973,15 +1227,12 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">скоро</span>
-                        </div>
+                        <div class="project-tags"><span class="project-tag">скоро</span></div>
                         <h3>Место для будущего проекта</h3>
                         <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
                 </div>
 
-                <!-- Проект 3: placeholder -->
                 <div class="project-card placeholder">
                     <div class="project-image">
                         <span class="project-number">// 03</span>
@@ -990,15 +1241,12 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">скоро</span>
-                        </div>
+                        <div class="project-tags"><span class="project-tag">скоро</span></div>
                         <h3>Место для будущего проекта</h3>
                         <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
                 </div>
 
-                <!-- Проект 4: placeholder -->
                 <div class="project-card placeholder">
                     <div class="project-image">
                         <span class="project-number">// 04</span>
@@ -1007,9 +1255,7 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">скоро</span>
-                        </div>
+                        <div class="project-tags"><span class="project-tag">скоро</span></div>
                         <h3>Место для будущего проекта</h3>
                         <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
@@ -1022,7 +1268,7 @@
     <!-- SERVICES -->
     <section id="services" class="reveal">
         <div class="container">
-            <span class="section-tag">03 / services</span>
+            <span class="section-tag">04 / services</span>
             <h2>Что я <span class="accent">делаю</span></h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -1053,20 +1299,120 @@
         </div>
     </section>
 
+    <!-- TECH -->
+    <section class="reveal">
+        <div class="container">
+            <span class="section-tag">05 / stack</span>
+            <h2>Мои <span class="accent">инструменты</span></h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    n8n
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    OpenAI
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    Claude
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    Telegram
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    Airtable
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    Supabase
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    HTML/CSS/JS
+                </div>
+                <div class="tech-item">
+                    <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    GitHub
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reveal">
+        <div class="container">
+            <span class="section-tag">06 / reviews</span>
+            <h2>Отзывы <span class="accent">клиентов</span></h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется. Клиенты записываются сами, мне остаётся только подтвердить время. Это огромная экономия времени!</div>
+                    <div class="review-author">— Елизавета</div>
+                    <div class="review-role">Психолог, частная практика</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Работали над автоматизацией обработки заявок. Иван быстро разобрался в задаче, предложил решение, которое я не рассматривал. Сделал за пару дней. Рекомендую!</div>
+                    <div class="review-author">— Дмитрий</div>
+                    <div class="review-role">Владелец онлайн-школы</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Заказывал настройку n8n и интеграцию с Airtable. Всё работает, документация понятная. Если что-то нужно доработать — Иван всегда на связи и быстро реагирует.</div>
+                    <div class="review-author">— Анна</div>
+                    <div class="review-role">Маркетолог</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="reveal">
+        <div class="container">
+            <span class="section-tag">07 / faq</span>
+            <h2>Частые <span class="accent">вопросы</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Сколько стоит проект?<div class="faq-toggle">+</div></div>
+                    <div class="faq-answer">Зависит от задачи. Сайт-лендинг — от 15 000 ₽, Telegram-бот — от 20 000 ₽, автоматизация — от 10 000 ₽. Точную цену называю после обсуждения ТЗ. Есть пакетные решения — сайт + бот + автоматизация от 40 000 ₽.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Сколько времени занимает разработка?<div class="faq-toggle">+</div></div>
+                    <div class="faq-answer">Лендинг — 3-5 дней. Telegram-бот с AI — 5-7 дней. Автоматизация — 2-5 дней в зависимости от сложности. Комплексный проект — 10-14 дней. Срочные задачи — обсуждаем отдельно.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Что если мне не понравится результат?<div class="faq-toggle">+</div></div>
+                    <div class="faq-answer">Работаю по этапам. На каждом этапе показываю результат и вношу правки. Если на этапе прототипа что-то не подходит — корректируем до старта разработки. Правки в рамках ТЗ — бесплатно.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Как проходит оплата?<div class="faq-toggle">+</div></div>
+                    <div class="faq-answer">50% предоплата, 50% после сдачи. Для крупных проектов — разбивка на 3 этапа. Работаю с физическими и юридическими лицами. Оплата на карту или по счёту.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Есть ли поддержка после сдачи?<div class="faq-toggle">+</div></div>
+                    <div class="faq-answer">Да, 30 дней бесплатной поддержки: исправление багов, мелкие доработки, консультации. После — поддержка по договорённости от 3 000 ₽/мес или разово за задачу.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACTS -->
     <section id="contacts" class="reveal">
         <div class="container">
-            <span class="section-tag">04 / contacts</span>
+            <span class="section-tag">08 / contacts</span>
             <h2>Связь <span class="accent">со мной</span></h2>
             <div class="contacts-grid">
-                <a href="https://t.me/username" target="_blank" class="contact-card">
+                <a href="https://t.me/na_svyazi_q" target="_blank" class="contact-card">
                     <span class="contact-label">// telegram</span>
-                    <span class="contact-value">@username</span>
+                    <span class="contact-value">@na_svyazi_q</span>
                     <span class="contact-hint">Самый быстрый способ — отвечу в течение часа</span>
                 </a>
-                <a href="mailto:your@email.com" class="contact-card">
+                <a href="mailto:vanya11222@mail.ru" class="contact-card">
                     <span class="contact-label">// email</span>
-                    <span class="contact-value">your@email.com</span>
+                    <span class="contact-value">vanya11222@mail.ru</span>
                     <span class="contact-hint">Для подробных запросов и ТЗ</span>
                 </a>
             </div>
@@ -1079,6 +1425,13 @@
             <p style="margin-top: 8px; font-size: 12px; opacity: 0.6;">Made with n8n • AI • Coffee ☕</p>
         </div>
     </footer>
+
+    <!-- FLOATING TELEGRAM -->
+    <a href="https://t.me/na_svyazi_q" target="_blank" class="tg-float" aria-label="Написать в Telegram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+    </a>
 
     <script>
         // БУРГЕР
@@ -1126,6 +1479,16 @@
             });
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
+            });
+        });
     </script>
 
 </body>
