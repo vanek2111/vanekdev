@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vanekdev — Автоматизация на n8n + AI</title>
+    <title data-ru="vanekdev — Автоматизация на n8n + AI" data-en="vanekdev — n8n + AI Automation">vanekdev — Автоматизация на n8n + AI</title>
     <meta name="description" content="Автоматизация бизнеса на n8n: сайты под ключ, Telegram-боты с AI, интеграции с CRM и базами данных. Работаю быстро, чётко и по делу.">
     <meta name="keywords" content="n8n, автоматизация, Telegram-бот, AI-агент, сайт под ключ, Airtable, Supabase">
     <meta property="og:title" content="vanekdev — Автоматизация на n8n + AI">
     <meta property="og:description" content="Помогаю малому бизнесу избавиться от рутины. Сайты, боты, автоматизация.">
     <meta property="og:type" content="website">
+    <link rel="alternate" hreflang="ru" href="https://vanek2111.github.io/vanekdev/?lang=ru" />
+    <link rel="alternate" hreflang="en" href="https://vanek2111.github.io/vanekdev/?lang=en" />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,6 +89,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
         
         .logo {
@@ -99,6 +102,7 @@
             font-weight: 600;
             color: var(--text);
             transition: color 0.3s ease;
+            flex-shrink: 0;
         }
         .logo:hover { color: var(--accent); }
         .logo-prefix { color: var(--accent); }
@@ -113,6 +117,12 @@
         @keyframes blink {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
 
         .nav-links {
@@ -146,6 +156,40 @@
         .nav-links a:hover { color: var(--accent); }
         .nav-links a:hover::before { opacity: 1; }
 
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: flex;
+            gap: 4px;
+            border: 1px solid var(--border);
+            padding: 3px;
+            background: var(--bg-alt);
+        }
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            color: var(--accent);
+        }
+        .lang-btn.active {
+            background: var(--accent);
+            color: var(--bg);
+        }
+        .lang-btn .flag {
+            font-size: 14px;
+            line-height: 1;
+        }
+
         .burger {
             display: none;
             flex-direction: column;
@@ -165,6 +209,7 @@
             display: block;
         }
 
+        /* MOBILE MENU */
         .mobile-menu {
             display: none;
             position: fixed;
@@ -172,7 +217,7 @@
             right: 0;
             bottom: 0;
             width: 85%;
-            max-width: 360px;
+            max-width: 380px;
             background: var(--bg-alt);
             z-index: 1001;
             flex-direction: column;
@@ -233,6 +278,16 @@
             text-align: center;
             display: block;
         }
+        .mobile-menu-footer .lang-switcher {
+            margin-top: 16px;
+            justify-content: center;
+            width: 100%;
+        }
+        .mobile-menu-footer .lang-switcher .lang-btn {
+            flex: 1;
+            justify-content: center;
+            padding: 10px;
+        }
 
         .menu-overlay {
             position: fixed;
@@ -285,6 +340,14 @@
         .btn-outline:hover {
             background: var(--accent);
             color: var(--bg);
+        }
+
+        /* FADE FOR LANGUAGE SWITCH */
+        .lang-fade {
+            transition: opacity 0.25s ease;
+        }
+        .lang-fade.fading {
+            opacity: 0;
         }
 
         /* HERO */
@@ -535,14 +598,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            position: relative;
         }
         .process-step {
             background: var(--bg-card);
             border: 1px solid var(--border);
             padding: 32px 24px;
             transition: all 0.3s ease;
-            position: relative;
         }
         .process-step:hover {
             border-color: var(--accent);
@@ -691,6 +752,9 @@
             z-index: 10;
             background: var(--bg);
         }
+        .project-card.placeholder[data-placeholder-en]::after {
+            content: 'SOON';
+        }
 
         /* SERVICES */
         .services-grid {
@@ -747,7 +811,7 @@
             color: var(--accent);
         }
 
-        /* TECH STACK */
+        /* TECH */
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -978,13 +1042,19 @@
             .hero h1 { font-size: 56px; }
             section h2 { font-size: 38px; }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .nav-links { gap: 20px; }
+            .nav-links a { font-size: 13px; }
+        }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .burger { display: flex; }
+            .mobile-menu { display: flex; }
+            .lang-switcher { display: none; }
+            .nav-right { gap: 0; }
         }
 
         @media (max-width: 768px) {
-            .burger { display: flex; }
-            .nav-links { display: none; }
-            .mobile-menu { display: flex; }
-            
             .hero { padding: 120px 0 60px; min-height: auto; }
             .hero h1 { font-size: 38px; letter-spacing: -1px; }
             .hero p { font-size: 16px; }
@@ -1028,19 +1098,29 @@
             <a href="#" class="logo">
                 <span class="logo-prefix">~/</span>vanekdev<span class="logo-cursor"></span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">about</a></li>
-                <li><a href="#process">process</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#services">services</a></li>
-                <li><a href="#reviews">reviews</a></li>
-                <li><a href="#contacts">contacts</a></li>
-            </ul>
-            <button class="burger" id="burger" aria-label="Меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about" data-ru="обо мне" data-en="about">обо мне</a></li>
+                    <li><a href="#process" data-ru="процесс" data-en="process">процесс</a></li>
+                    <li><a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a></li>
+                    <li><a href="#services" data-ru="услуги" data-en="services">услуги</a></li>
+                    <li><a href="#reviews" data-ru="отзывы" data-en="reviews">отзывы</a></li>
+                    <li><a href="#contacts" data-ru="контакты" data-en="contacts">контакты</a></li>
+                </ul>
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn active" data-lang="ru">
+                        <span class="flag">🇷🇺</span> RU
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span> EN
+                    </button>
+                </div>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -1052,15 +1132,23 @@
             <button class="mobile-menu-close" id="mobileMenuClose">×</button>
         </div>
         <nav class="mobile-menu-nav">
-            <a href="#about">about</a>
-            <a href="#process">process</a>
-            <a href="#portfolio">portfolio</a>
-            <a href="#services">services</a>
-            <a href="#reviews">reviews</a>
-            <a href="#contacts">contacts</a>
+            <a href="#about" data-ru="обо мне" data-en="about">обо мне</a>
+            <a href="#process" data-ru="процесс" data-en="process">процесс</a>
+            <a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a>
+            <a href="#services" data-ru="услуги" data-en="services">услуги</a>
+            <a href="#reviews" data-ru="отзывы" data-en="reviews">отзывы</a>
+            <a href="#contacts" data-ru="контакты" data-en="contacts">контакты</a>
         </nav>
         <div class="mobile-menu-footer">
-            <a href="#contacts" class="btn">Связаться</a>
+            <a href="#contacts" class="btn" data-ru="Связаться" data-en="Contact me">Связаться</a>
+            <div class="lang-switcher" id="langSwitcherMobile">
+                <button class="lang-btn active" data-lang="ru">
+                    <span class="flag">🇷🇺</span> RU
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <span class="flag">🇬🇧</span> EN
+                </button>
+            </div>
         </div>
     </div>
 
@@ -1070,26 +1158,26 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-tag">Доступен для проектов</span>
-                <h1>Автоматизация бизнеса<br>на <span class="accent">n8n</span> + AI</h1>
-                <p>Помогаю малому бизнесу избавиться от рутины: сайты под ключ, Telegram-боты с AI, интеграции с CRM и базами данных. Работаю быстро, чётко и по делу.</p>
+                <span class="hero-tag" data-ru="Доступен для проектов" data-en="Available for projects">Доступен для проектов</span>
+                <h1><span data-ru="Автоматизация бизнеса" data-en="Business Automation">Автоматизация бизнеса</span><br><span data-ru="на" data-en="with">на</span> <span class="accent">n8n</span> + AI</h1>
+                <p data-ru="Помогаю малому бизнесу избавиться от рутины: сайты под ключ, Telegram-боты с AI, интеграции с CRM и базами данных. Работаю быстро, чётко и по делу." data-en="I help small businesses get rid of routine: turnkey websites, AI-powered Telegram bots, integrations with CRM and databases. Fast, clean and to the point.">Помогаю малому бизнесу избавиться от рутины: сайты под ключ, Telegram-боты с AI, интеграции с CRM и базами данных. Работаю быстро, чётко и по делу.</p>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn">Посмотреть работы</a>
-                    <a href="#contacts" class="btn btn-outline">Написать мне</a>
+                    <a href="#portfolio" class="btn" data-ru="Посмотреть работы" data-en="View portfolio">Посмотреть работы</a>
+                    <a href="#contacts" class="btn btn-outline" data-ru="Написать мне" data-en="Contact me">Написать мне</a>
                 </div>
                 
                 <div class="hero-stats">
                     <div>
                         <div class="hero-stat-value">3+</div>
-                        <div class="hero-stat-label">Проекта</div>
+                        <div class="hero-stat-label" data-ru="Проекта" data-en="Projects">Проекта</div>
                     </div>
                     <div>
                         <div class="hero-stat-value">100%</div>
-                        <div class="hero-stat-label">Довольных клиентов</div>
+                        <div class="hero-stat-label" data-ru="Довольных клиентов" data-en="Happy clients">Довольных клиентов</div>
                     </div>
                     <div>
                         <div class="hero-stat-value">24/7</div>
-                        <div class="hero-stat-label">На связи</div>
+                        <div class="hero-stat-label" data-ru="На связи" data-en="Available">На связи</div>
                     </div>
                 </div>
             </div>
@@ -1100,13 +1188,13 @@
     <div class="container">
         <div class="terminal reveal">
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">whoami</span></span>
-            <span class="terminal-line"><span class="out">→ Разработчик автоматизаций и веб-сайтов</span></span>
+            <span class="terminal-line"><span class="out" data-ru="→ Разработчик автоматизаций и веб-сайтов" data-en="→ Automation & Web Developer">→ Разработчик автоматизаций и веб-сайтов</span></span>
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">cat skills.txt</span></span>
-            <span class="terminal-line"><span class="out">→ n8n • AI-агенты (OpenAI, Claude) • HTML/CSS/JS • Airtable • Supabase • Telegram Bot API</span></span>
+            <span class="terminal-line"><span class="out" data-ru="→ n8n • AI-агенты (OpenAI, Claude) • HTML/CSS/JS • Airtable • Supabase • Telegram Bot API" data-en="→ n8n • AI agents (OpenAI, Claude) • HTML/CSS/JS • Airtable • Supabase • Telegram Bot API">→ n8n • AI-агенты (OpenAI, Claude) • HTML/CSS/JS • Airtable • Supabase • Telegram Bot API</span></span>
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">ls ./services</span></span>
             <span class="terminal-line"><span class="out">→ sites/ bots/ automation/ integrations/</span></span>
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">status</span></span>
-            <span class="terminal-line"><span class="out">→ <span style="color: #00ff9d;">●</span> Свободен для новых проектов</span></span>
+            <span class="terminal-line"><span class="out" data-ru="→ ● Свободен для новых проектов" data-en="→ ● Available for new projects">→ <span style="color: #00ff9d;">●</span> Свободен для новых проектов</span></span>
         </div>
     </div>
 
@@ -1114,33 +1202,33 @@
     <section id="about" class="reveal">
         <div class="container">
             <span class="section-tag">01 / about</span>
-            <h2>Обо <span class="accent">мне</span></h2>
+            <h2><span data-ru="Обо" data-en="About">Обо</span> <span class="accent" data-ru="мне" data-en="me">мне</span></h2>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="about-avatar">V</div>
-                    <h3>Иван</h3>
+                    <h3 data-ru="Иван" data-en="Ivan">Иван</h3>
                     <div class="role">// automation developer</div>
                     <div class="info-item">
-                        <span class="key">опыт:</span>
-                        <span>1+ год в автоматизации</span>
+                        <span class="key" data-ru="опыт:" data-en="exp:">опыт:</span>
+                        <span data-ru="1+ год в автоматизации" data-en="1+ year in automation">1+ год в автоматизации</span>
                     </div>
                     <div class="info-item">
-                        <span class="key">стек:</span>
+                        <span class="key" data-ru="стек:" data-en="stack:">стек:</span>
                         <span>n8n, AI, HTML/CSS</span>
                     </div>
                     <div class="info-item">
-                        <span class="key">языки:</span>
-                        <span>Русский, English</span>
+                        <span class="key" data-ru="языки:" data-en="langs:">языки:</span>
+                        <span data-ru="Русский, English" data-en="Russian, English">Русский, English</span>
                     </div>
                     <div class="info-item">
-                        <span class="key">формат:</span>
-                        <span>Удалённо, по всему миру</span>
+                        <span class="key" data-ru="формат:" data-en="format:">формат:</span>
+                        <span data-ru="Удалённо, по всему миру" data-en="Remote, worldwide">Удалённо, по всему миру</span>
                     </div>
                 </div>
                 <div class="about-text">
-                    <p>Привет! Меня зовут <strong>Иван</strong>, и я занимаюсь автоматизацией бизнес-процессов на платформе <strong>n8n</strong> с использованием AI.</p>
-                    <p>Моя специализация — <strong>создание сайтов под ключ</strong> (лендинги, многостраничники) и <strong>интеграция их с Telegram-ботами, AI-агентами и базами данных</strong>. Помогаю малым бизнесам и экспертам перестать терять заявки в переписках и вручную обрабатывать каждое обращение.</p>
-                    <p>Работаю чётко: сначала обсуждаем задачу, потом я предлагаю решение и сроки. На связи 24/7, отвечаю быстро.</p>
+                    <p data-ru="Привет! Меня зовут Иван, и я занимаюсь автоматизацией бизнес-процессов на платформе n8n с использованием AI." data-en="Hi! My name is Ivan, and I do business process automation on the n8n platform using AI.">Привет! Меня зовут <strong>Иван</strong>, и я занимаюсь автоматизацией бизнес-процессов на платформе <strong>n8n</strong> с использованием AI.</p>
+                    <p data-ru="Моя специализация — создание сайтов под ключ (лендинги, многостраничники) и интеграция их с Telegram-ботами, AI-агентами и базами данных. Помогаю малым бизнесам и экспертам перестать терять заявки в переписках и вручную обрабатывать каждое обращение." data-en="My specialization is turnkey website creation (landings, multi-page sites) and their integration with Telegram bots, AI agents and databases. I help small businesses and experts stop losing leads in chats and manually processing every request.">Моя специализация — <strong>создание сайтов под ключ</strong> (лендинги, многостраничники) и <strong>интеграция их с Telegram-ботами, AI-агентами и базами данных</strong>. Помогаю малым бизнесам и экспертам перестать терять заявки в переписках и вручную обрабатывать каждое обращение.</p>
+                    <p data-ru="Работаю чётко: сначала обсуждаем задачу, потом я предлагаю решение и сроки. На связи 24/7, отвечаю быстро." data-en="I work clearly: first we discuss the task, then I offer a solution and timeline. Available 24/7, I respond fast.">Работаю чётко: сначала обсуждаем задачу, потом я предлагаю решение и сроки. На связи 24/7, отвечаю быстро.</p>
                     
                     <div class="skills-grid">
                         <div class="skill-item">n8n</div>
@@ -1161,32 +1249,32 @@
     <section id="process" class="reveal">
         <div class="container">
             <span class="section-tag">02 / process</span>
-            <h2>Как я <span class="accent">работаю</span></h2>
+            <h2><span data-ru="Как я" data-en="How I">Как я</span> <span class="accent" data-ru="работаю" data-en="work">работаю</span></h2>
             <div class="process-grid">
                 <div class="process-step">
                     <div class="process-number">01</div>
-                    <h3>Заявка</h3>
-                    <p>Ты пишешь в Telegram или на email. Рассказываешь, какая задача.</p>
+                    <h3 data-ru="Заявка" data-en="Request">Заявка</h3>
+                    <p data-ru="Ты пишешь в Telegram или на email. Рассказываешь, какая задача." data-en="You write to Telegram or email. Tell me about your task.">Ты пишешь в Telegram или на email. Рассказываешь, какая задача.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">02</div>
-                    <h3>Обсуждение</h3>
-                    <p>Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки.</p>
+                    <h3 data-ru="Обсуждение" data-en="Discussion">Обсуждение</h3>
+                    <p data-ru="Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки." data-en="We call or chat. I clarify details, offer a solution and timeline.">Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">03</div>
-                    <h3>Прототип</h3>
-                    <p>Показываю черновик (макет, схему бота, workflow). Вносим правки.</p>
+                    <h3 data-ru="Прототип" data-en="Prototype">Прототип</h3>
+                    <p data-ru="Показываю черновик (макет, схему бота, workflow). Вносим правки." data-en="I show a draft (layout, bot scheme, workflow). We make edits.">Показываю черновик (макет, схему бота, workflow). Вносим правки.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">04</div>
-                    <h3>Реализация</h3>
-                    <p>Делаю проект. Держу в курсе на каждом этапе. Показываю промежуточные результаты.</p>
+                    <h3 data-ru="Реализация" data-en="Implementation">Реализация</h3>
+                    <p data-ru="Делаю проект. Держу в курсе на каждом этапе. Показываю промежуточные результаты." data-en="I build the project. Keep you updated at every stage. Show intermediate results.">Делаю проект. Держу в курсе на каждом этапе. Показываю промежуточные результаты.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">05</div>
-                    <h3>Сдача</h3>
-                    <p>Передаю проект, объясняю, как пользоваться. Помогаю с запуском. Гарантия 30 дней.</p>
+                    <h3 data-ru="Сдача" data-en="Delivery">Сдача</h3>
+                    <p data-ru="Передаю проект, объясняю, как пользоваться. Помогаю с запуском. Гарантия 30 дней." data-en="I hand over the project, explain how to use it. Help with launch. 30-day warranty.">Передаю проект, объясняю, как пользоваться. Помогаю с запуском. Гарантия 30 дней.</p>
                 </div>
             </div>
         </div>
@@ -1196,7 +1284,7 @@
     <section id="portfolio" class="reveal">
         <div class="container">
             <span class="section-tag">03 / portfolio</span>
-            <h2>Мои <span class="accent">работы</span></h2>
+            <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="работы" data-en="works">работы</span></h2>
             <div class="portfolio-grid">
                 
                 <div class="project-card">
@@ -1208,14 +1296,14 @@
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">сайт</span>
+                            <span class="project-tag" data-ru="сайт" data-en="site">сайт</span>
                             <span class="project-tag">n8n</span>
-                            <span class="project-tag">AI-бот</span>
+                            <span class="project-tag" data-ru="AI-бот" data-en="AI bot">AI-бот</span>
                             <span class="project-tag">Airtable</span>
                         </div>
-                        <h3>Сайт психолога + AI-бот</h3>
-                        <p class="project-desc">Лендинг с формой заявок + Telegram-бот с AI-агентом, который собирает данные клиентов. Заявки автоматически попадают в Airtable, уведомления — в Telegram.</p>
-                        <a href="https://vanek2111.github.io/sitepsy/" target="_blank" class="project-link">Посмотреть проект</a>
+                        <h3 data-ru="Сайт психолога + AI-бот" data-en="Psychologist website + AI bot">Сайт психолога + AI-бот</h3>
+                        <p class="project-desc" data-ru="Лендинг с формой заявок + Telegram-бот с AI-агентом, который собирает данные клиентов. Заявки автоматически попадают в Airtable, уведомления — в Telegram." data-en="Landing page with a request form + Telegram bot with an AI agent that collects client data. Requests automatically go to Airtable, notifications — to Telegram.">Лендинг с формой заявок + Telegram-бот с AI-агентом, который собирает данные клиентов. Заявки автоматически попадают в Airtable, уведомления — в Telegram.</p>
+                        <a href="https://vanek2111.github.io/sitepsy/" target="_blank" class="project-link" data-ru="Посмотреть проект" data-en="View project">Посмотреть проект</a>
                     </div>
                 </div>
 
@@ -1227,9 +1315,9 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags"><span class="project-tag">скоро</span></div>
-                        <h3>Место для будущего проекта</h3>
-                        <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
+                        <div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div>
+                        <h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3>
+                        <p class="project-desc" data-ru="Здесь будет следующий кейс. Следи за обновлениями." data-en="The next case will be here. Stay tuned.">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
                 </div>
 
@@ -1241,9 +1329,9 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags"><span class="project-tag">скоро</span></div>
-                        <h3>Место для будущего проекта</h3>
-                        <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
+                        <div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div>
+                        <h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3>
+                        <p class="project-desc" data-ru="Здесь будет следующий кейс. Следи за обновлениями." data-en="The next case will be here. Stay tuned.">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
                 </div>
 
@@ -1255,9 +1343,9 @@
                         </svg>
                     </div>
                     <div class="project-body">
-                        <div class="project-tags"><span class="project-tag">скоро</span></div>
-                        <h3>Место для будущего проекта</h3>
-                        <p class="project-desc">Здесь будет следующий кейс. Следи за обновлениями.</p>
+                        <div class="project-tags"><span class="project-tag" data-ru="скоро" data-en="soon">скоро</span></div>
+                        <h3 data-ru="Место для будущего проекта" data-en="Place for a future project">Место для будущего проекта</h3>
+                        <p class="project-desc" data-ru="Здесь будет следующий кейс. Следи за обновлениями." data-en="The next case will be here. Stay tuned.">Здесь будет следующий кейс. Следи за обновлениями.</p>
                     </div>
                 </div>
 
@@ -1269,31 +1357,31 @@
     <section id="services" class="reveal">
         <div class="container">
             <span class="section-tag">04 / services</span>
-            <h2>Что я <span class="accent">делаю</span></h2>
+            <h2><span data-ru="Что я" data-en="What I">Что я</span> <span class="accent" data-ru="делаю" data-en="do">делаю</span></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <span class="service-number">// 01</span>
-                    <h3>Сайты под ключ</h3>
-                    <p>Лендинги и многостраничные сайты с современным дизайном, адаптивом и интеграцией форм. Хостинг на GitHub Pages или твоём сервере.</p>
-                    <div class="service-price">от 15 000 ₽</div>
+                    <h3 data-ru="Сайты под ключ" data-en="Turnkey websites">Сайты под ключ</h3>
+                    <p data-ru="Лендинги и многостраничные сайты с современным дизайном, адаптивом и интеграцией форм. Хостинг на GitHub Pages или твоём сервере." data-en="Landing pages and multi-page websites with modern design, responsive layout and form integration. Hosting on GitHub Pages or your server.">Лендинги и многостраничные сайты с современным дизайном, адаптивом и интеграцией форм. Хостинг на GitHub Pages или твоём сервере.</p>
+                    <div class="service-price" data-ru="от 15 000 ₽" data-en="from $200">от 15 000 ₽</div>
                 </div>
                 <div class="service-card">
                     <span class="service-number">// 02</span>
-                    <h3>Telegram-боты с AI</h3>
-                    <p>Боты для приёма заявок, консультаций, поддержки. С памятью, AI-агентом, интеграцией с базами данных и уведомлениями.</p>
-                    <div class="service-price">от 20 000 ₽</div>
+                    <h3 data-ru="Telegram-боты с AI" data-en="AI Telegram bots">Telegram-боты с AI</h3>
+                    <p data-ru="Боты для приёма заявок, консультаций, поддержки. С памятью, AI-агентом, интеграцией с базами данных и уведомлениями." data-en="Bots for receiving requests, consultations, support. With memory, AI agent, database integration and notifications.">Боты для приёма заявок, консультаций, поддержки. С памятью, AI-агентом, интеграцией с базами данных и уведомлениями.</p>
+                    <div class="service-price" data-ru="от 20 000 ₽" data-en="from $250">от 20 000 ₽</div>
                 </div>
                 <div class="service-card">
                     <span class="service-number">// 03</span>
-                    <h3>Автоматизация на n8n</h3>
-                    <p>Интеграции между сервисами, автоматическая обработка заявок, синхронизация данных, уведомления — без ручной работы.</p>
-                    <div class="service-price">от 10 000 ₽</div>
+                    <h3 data-ru="Автоматизация на n8n" data-en="n8n automation">Автоматизация на n8n</h3>
+                    <p data-ru="Интеграции между сервисами, автоматическая обработка заявок, синхронизация данных, уведомления — без ручной работы." data-en="Integrations between services, automatic request processing, data sync, notifications — no manual work.">Интеграции между сервисами, автоматическая обработка заявок, синхронизация данных, уведомления — без ручной работы.</p>
+                    <div class="service-price" data-ru="от 10 000 ₽" data-en="from $150">от 10 000 ₽</div>
                 </div>
                 <div class="service-card">
                     <span class="service-number">// 04</span>
-                    <h3>Комплексные решения</h3>
-                    <p>Сайт + бот + автоматизация + база данных. Всё, что нужно для приёма и обработки заявок — под одним ключом.</p>
-                    <div class="service-price">от 40 000 ₽</div>
+                    <h3 data-ru="Комплексные решения" data-en="Complex solutions">Комплексные решения</h3>
+                    <p data-ru="Сайт + бот + автоматизация + база данных. Всё, что нужно для приёма и обработки заявок — под одним ключом." data-en="Website + bot + automation + database. Everything needed to receive and process requests — turnkey.">Сайт + бот + автоматизация + база данных. Всё, что нужно для приёма и обработки заявок — под одним ключом.</p>
+                    <div class="service-price" data-ru="от 40 000 ₽" data-en="from $500">от 40 000 ₽</div>
                 </div>
             </div>
         </div>
@@ -1303,7 +1391,7 @@
     <section class="reveal">
         <div class="container">
             <span class="section-tag">05 / stack</span>
-            <h2>Мои <span class="accent">инструменты</span></h2>
+            <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="инструменты" data-en="tools">инструменты</span></h2>
             <div class="tech-grid">
                 <div class="tech-item">
                     <svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
@@ -1345,25 +1433,25 @@
     <section id="reviews" class="reveal">
         <div class="container">
             <span class="section-tag">06 / reviews</span>
-            <h2>Отзывы <span class="accent">клиентов</span></h2>
+            <h2><span data-ru="Отзывы" data-en="Client">Отзывы</span> <span class="accent" data-ru="клиентов" data-en="reviews">клиентов</span></h2>
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется. Клиенты записываются сами, мне остаётся только подтвердить время. Это огромная экономия времени!</div>
-                    <div class="review-author">— Елизавета</div>
-                    <div class="review-role">Психолог, частная практика</div>
+                    <div class="review-text" data-ru="Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется. Клиенты записываются сами, мне остаётся только подтвердить время. Это огромная экономия времени!" data-en="Ivan made me a website and Telegram bot in 5 days. Now all requests automatically go to Telegram, nothing gets lost. Clients book themselves, I just confirm the time. Huge time saver!">Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется. Клиенты записываются сами, мне остаётся только подтвердить время. Это огромная экономия времени!</div>
+                    <div class="review-author">— <span data-ru="Елизавета" data-en="Elizaveta">Елизавета</span></div>
+                    <div class="review-role" data-ru="Психолог, частная практика" data-en="Psychologist, private practice">Психолог, частная практика</div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Работали над автоматизацией обработки заявок. Иван быстро разобрался в задаче, предложил решение, которое я не рассматривал. Сделал за пару дней. Рекомендую!</div>
-                    <div class="review-author">— Дмитрий</div>
-                    <div class="review-role">Владелец онлайн-школы</div>
+                    <div class="review-text" data-ru="Работали над автоматизацией обработки заявок. Иван быстро разобрался в задаче, предложил решение, которое я не рассматривал. Сделал за пару дней. Рекомендую!" data-en="We worked on request processing automation. Ivan quickly understood the task and suggested a solution I hadn't considered. Done in a couple of days. Highly recommend!">Работали над автоматизацией обработки заявок. Иван быстро разобрался в задаче, предложил решение, которое я не рассматривал. Сделал за пару дней. Рекомендую!</div>
+                    <div class="review-author">— <span data-ru="Дмитрий" data-en="Dmitry">Дмитрий</span></div>
+                    <div class="review-role" data-ru="Владелец онлайн-школы" data-en="Online school owner">Владелец онлайн-школы</div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Заказывал настройку n8n и интеграцию с Airtable. Всё работает, документация понятная. Если что-то нужно доработать — Иван всегда на связи и быстро реагирует.</div>
-                    <div class="review-author">— Анна</div>
-                    <div class="review-role">Маркетолог</div>
+                    <div class="review-text" data-ru="Заказывал настройку n8n и интеграцию с Airtable. Всё работает, документация понятная. Если что-то нужно доработать — Иван всегда на связи и быстро реагирует." data-en="Ordered n8n setup and Airtable integration. Everything works, documentation is clear. If something needs to be tweaked — Ivan is always available and responds fast.">Заказывал настройку n8n и интеграцию с Airtable. Всё работает, документация понятная. Если что-то нужно доработать — Иван всегда на связи и быстро реагирует.</div>
+                    <div class="review-author">— <span data-ru="Анна" data-en="Anna">Анна</span></div>
+                    <div class="review-role" data-ru="Маркетолог" data-en="Marketer">Маркетолог</div>
                 </div>
             </div>
         </div>
@@ -1373,27 +1461,27 @@
     <section class="reveal">
         <div class="container">
             <span class="section-tag">07 / faq</span>
-            <h2>Частые <span class="accent">вопросы</span></h2>
+            <h2><span data-ru="Частые" data-en="Frequent">Частые</span> <span class="accent" data-ru="вопросы" data-en="questions">вопросы</span></h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question">Сколько стоит проект?<div class="faq-toggle">+</div></div>
-                    <div class="faq-answer">Зависит от задачи. Сайт-лендинг — от 15 000 ₽, Telegram-бот — от 20 000 ₽, автоматизация — от 10 000 ₽. Точную цену называю после обсуждения ТЗ. Есть пакетные решения — сайт + бот + автоматизация от 40 000 ₽.</div>
+                    <div class="faq-question"><span data-ru="Сколько стоит проект?" data-en="How much does a project cost?">Сколько стоит проект?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer" data-ru="Зависит от задачи. Сайт-лендинг — от 15 000 ₽, Telegram-бот — от 20 000 ₽, автоматизация — от 10 000 ₽. Точную цену называю после обсуждения ТЗ. Есть пакетные решения — сайт + бот + автоматизация от 40 000 ₽." data-en="Depends on the task. Landing page — from $200, Telegram bot — from $250, automation — from $150. I give an exact price after discussing the specs. Package solutions available — website + bot + automation from $500.">Зависит от задачи. Сайт-лендинг — от 15 000 ₽, Telegram-бот — от 20 000 ₽, автоматизация — от 10 000 ₽. Точную цену называю после обсуждения ТЗ. Есть пакетные решения — сайт + бот + автоматизация от 40 000 ₽.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Сколько времени занимает разработка?<div class="faq-toggle">+</div></div>
-                    <div class="faq-answer">Лендинг — 3-5 дней. Telegram-бот с AI — 5-7 дней. Автоматизация — 2-5 дней в зависимости от сложности. Комплексный проект — 10-14 дней. Срочные задачи — обсуждаем отдельно.</div>
+                    <div class="faq-question"><span data-ru="Сколько времени занимает разработка?" data-en="How long does development take?">Сколько времени занимает разработка?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer" data-ru="Лендинг — 3-5 дней. Telegram-бот с AI — 5-7 дней. Автоматизация — 2-5 дней в зависимости от сложности. Комплексный проект — 10-14 дней. Срочные задачи — обсуждаем отдельно." data-en="Landing page — 3-5 days. AI Telegram bot — 5-7 days. Automation — 2-5 days depending on complexity. Complex project — 10-14 days. Urgent tasks — discussed separately.">Лендинг — 3-5 дней. Telegram-бот с AI — 5-7 дней. Автоматизация — 2-5 дней в зависимости от сложности. Комплексный проект — 10-14 дней. Срочные задачи — обсуждаем отдельно.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Что если мне не понравится результат?<div class="faq-toggle">+</div></div>
-                    <div class="faq-answer">Работаю по этапам. На каждом этапе показываю результат и вношу правки. Если на этапе прототипа что-то не подходит — корректируем до старта разработки. Правки в рамках ТЗ — бесплатно.</div>
+                    <div class="faq-question"><span data-ru="Что если мне не понравится результат?" data-en="What if I don't like the result?">Что если мне не понравится результат?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer" data-ru="Работаю по этапам. На каждом этапе показываю результат и вношу правки. Если на этапе прототипа что-то не подходит — корректируем до старта разработки. Правки в рамках ТЗ — бесплатно." data-en="I work in stages. At each stage I show the result and make edits. If something doesn't fit at the prototype stage — we adjust before development starts. Edits within the specs — free.">Работаю по этапам. На каждом этапе показываю результат и вношу правки. Если на этапе прототипа что-то не подходит — корректируем до старта разработки. Правки в рамках ТЗ — бесплатно.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Как проходит оплата?<div class="faq-toggle">+</div></div>
-                    <div class="faq-answer">50% предоплата, 50% после сдачи. Для крупных проектов — разбивка на 3 этапа. Работаю с физическими и юридическими лицами. Оплата на карту или по счёту.</div>
+                    <div class="faq-question"><span data-ru="Как проходит оплата?" data-en="How does payment work?">Как проходит оплата?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer" data-ru="50% предоплата, 50% после сдачи. Для крупных проектов — разбивка на 3 этапа. Работаю с физическими и юридическими лицами. Оплата на карту или по счёту." data-en="50% upfront, 50% after delivery. For large projects — split into 3 stages. I work with individuals and companies. Payment by card or invoice.">50% предоплата, 50% после сдачи. Для крупных проектов — разбивка на 3 этапа. Работаю с физическими и юридическими лицами. Оплата на карту или по счёту.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Есть ли поддержка после сдачи?<div class="faq-toggle">+</div></div>
-                    <div class="faq-answer">Да, 30 дней бесплатной поддержки: исправление багов, мелкие доработки, консультации. После — поддержка по договорённости от 3 000 ₽/мес или разово за задачу.</div>
+                    <div class="faq-question"><span data-ru="Есть ли поддержка после сдачи?" data-en="Is there support after delivery?">Есть ли поддержка после сдачи?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer" data-ru="Да, 30 дней бесплатной поддержки: исправление багов, мелкие доработки, консультации. После — поддержка по договорённости от 3 000 ₽/мес или разово за задачу." data-en="Yes, 30 days of free support: bug fixes, minor tweaks, consultations. After — support by agreement from $50/month or one-time per task.">Да, 30 дней бесплатной поддержки: исправление багов, мелкие доработки, консультации. После — поддержка по договорённости от 3 000 ₽/мес или разово за задачу.</div>
                 </div>
             </div>
         </div>
@@ -1403,17 +1491,17 @@
     <section id="contacts" class="reveal">
         <div class="container">
             <span class="section-tag">08 / contacts</span>
-            <h2>Связь <span class="accent">со мной</span></h2>
+            <h2><span data-ru="Связь" data-en="Get in">Связь</span> <span class="accent" data-ru="со мной" data-en="touch">со мной</span></h2>
             <div class="contacts-grid">
                 <a href="https://t.me/na_svyazi_q" target="_blank" class="contact-card">
                     <span class="contact-label">// telegram</span>
                     <span class="contact-value">@na_svyazi_q</span>
-                    <span class="contact-hint">Самый быстрый способ — отвечу в течение часа</span>
+                    <span class="contact-hint" data-ru="Самый быстрый способ — отвечу в течение часа" data-en="Fastest way — I reply within an hour">Самый быстрый способ — отвечу в течение часа</span>
                 </a>
                 <a href="mailto:vanya11222@mail.ru" class="contact-card">
                     <span class="contact-label">// email</span>
                     <span class="contact-value">vanya11222@mail.ru</span>
-                    <span class="contact-hint">Для подробных запросов и ТЗ</span>
+                    <span class="contact-hint" data-ru="Для подробных запросов и ТЗ" data-en="For detailed requests and specs">Для подробных запросов и ТЗ</span>
                 </a>
             </div>
         </div>
@@ -1421,12 +1509,11 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 <span class="accent">vanekdev</span> · Automation Developer</p>
+            <p>© 2026 <span class="accent">vanekdev</span> · <span data-ru="Automation Developer" data-en="Automation Developer">Automation Developer</span></p>
             <p style="margin-top: 8px; font-size: 12px; opacity: 0.6;">Made with n8n • AI • Coffee ☕</p>
         </div>
     </footer>
 
-    <!-- FLOATING TELEGRAM -->
     <a href="https://t.me/na_svyazi_q" target="_blank" class="tg-float" aria-label="Написать в Telegram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
@@ -1434,6 +1521,83 @@
     </a>
 
     <script>
+        // ЯЗЫК
+        const translations = {
+            ru: {},
+            en: {}
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'ru';
+
+        // Проверка URL параметра
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        if (urlLang === 'en' || urlLang === 'ru') {
+            currentLang = urlLang;
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+
+            document.documentElement.lang = lang;
+
+            // Title
+            const title = document.querySelector('title');
+            title.textContent = title.dataset[lang];
+
+            // Все элементы с data-ru / data-en
+            document.querySelectorAll('[data-ru][data-en]').forEach(el => {
+                const newText = el.dataset[lang];
+                if (newText) {
+                    el.textContent = newText;
+                }
+            });
+
+            // Placeholders на портфолио
+            document.querySelectorAll('.project-card.placeholder').forEach(card => {
+                card.classList.toggle('en', lang === 'en');
+            });
+
+            // Активная кнопка
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Обновляем URL
+            const url = new URL(window.location);
+            if (lang === 'ru') {
+                url.searchParams.delete('lang');
+            } else {
+                url.searchParams.set('lang', lang);
+            }
+            window.history.replaceState({}, '', url);
+        }
+
+        // Переключение с fade
+        function switchLang(lang) {
+            if (lang === currentLang) return;
+            
+            document.body.classList.add('lang-fade');
+            document.body.classList.add('fading');
+            
+            setTimeout(() => {
+                setLanguage(lang);
+                document.body.classList.remove('fading');
+                setTimeout(() => document.body.classList.remove('lang-fade'), 300);
+            }, 250);
+        }
+
+        // Кнопки
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLang(btn.dataset.lang);
+            });
+        });
+
+        // Применяем язык при загрузке
+        setLanguage(currentLang);
+
         // БУРГЕР
         const burger = document.getElementById('burger');
         const mobileMenu = document.getElementById('mobileMenu');
