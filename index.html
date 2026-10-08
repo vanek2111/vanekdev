@@ -41,8 +41,8 @@
             position: fixed;
             inset: 0;
             background-image: 
-                linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(0, 255, 157, 0.022) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 157, 0.022) 1px, transparent 1px);
             background-size: 50px 50px;
             pointer-events: none;
             z-index: 0;
@@ -209,7 +209,7 @@
             display: block;
         }
         .mobile-menu-nav a::before { content: '> '; color: var(--accent); margin-right: 8px; }
-        .mobile-menu-nav a:hover { background: rgba(0, 255, 157, 0.05); color: var(--accent); padding-left: 40px; }
+        .mobile-menu-nav a:hover { background: rgba(0, 255, 157, 0.06); color: var(--accent); padding-left: 40px; }
         .mobile-menu-footer { padding: 20px 32px 32px; }
         .mobile-menu-footer .btn { width: 100%; text-align: center; display: block; }
         .menu-overlay {
@@ -245,7 +245,7 @@
             transition: left 0.5s ease;
         }
         .btn:hover::before { left: 100%; }
-        .btn:hover { box-shadow: 0 0 30px rgba(0, 255, 157, 0.5); transform: translateY(-2px); }
+        .btn:hover { box-shadow: 0 0 30px rgba(0, 255, 157, 0.2); transform: translateY(-2px); }
         .btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
         .btn-outline:hover { background: var(--accent); color: var(--bg); }
         .lang-fade { transition: opacity 0.25s ease; }
@@ -270,18 +270,24 @@
             transition: all 0.3s ease;
         }
         .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-        .back-to-top:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 30px rgba(0, 255, 157, 0.5); }
+        .back-to-top:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 30px rgba(0, 255, 157, 0.2); }
         .back-to-top svg { width: 22px; height: 22px; stroke: currentColor; }
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 0 80px; position: relative; }
         .hero-content { max-width: 900px; }
+        .hero-meta { display: flex; flex-wrap: wrap; align-items: center; column-gap: clamp(24px, 4vw, 48px); row-gap: 16px; margin-bottom: 26px; }
+        .hero-byline { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 0; }
+        .hero-monogram { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(0, 255, 157, .38); border-radius: 50%; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 17px; font-weight: 700; background: rgba(0, 255, 157, .08); }
+        .hero-byline-copy { display: flex; flex-direction: column; line-height: 1.35; }
+        .hero-byline-copy strong { color: var(--text); font-size: 14px; font-weight: 600; }
+        .hero-byline-copy span { color: var(--text-muted); font-size: 12px; }
         .hero-tag {
             display: inline-block;
             font-family: 'JetBrains Mono', monospace;
             font-size: 13px; color: var(--accent);
-            margin-bottom: 24px;
+            margin-bottom: 0;
             padding: 6px 14px;
             border: 1px solid var(--border);
-            background: rgba(0, 255, 157, 0.05);
+            background: rgba(0, 255, 157, 0.06);
         }
         .hero-tag::before { content: '● '; color: var(--accent); animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
@@ -341,8 +347,8 @@
         .process-step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text); }
         .process-step p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
-        .project-card { background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; transition: all 0.4s ease; position: relative; display: flex; flex-direction: column; }
-        .project-card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 255, 157, 0.1); }
+        .project-card { scroll-margin-top: 110px; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; transition: all 0.4s ease; position: relative; display: flex; flex-direction: column; }
+        .project-card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 255, 157, 0.08); }
         .project-image { aspect-ratio: 16/10; background: linear-gradient(135deg, #1a2620, #0f1410); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
         .project-image svg { width: 80px; height: 80px; opacity: 0.3; transition: all 0.4s ease; stroke: var(--accent); }
         .project-card:hover .project-image svg { opacity: 1; transform: scale(1.1); }
@@ -350,12 +356,15 @@
         .project-number { position: absolute; top: 12px; left: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); z-index: 2; background: rgba(10, 14, 10, 0.7); padding: 2px 8px; border-radius: 2px; }
         .project-body { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; }
         .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
-        .project-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); padding: 4px 10px; border: 1px solid var(--border); background: rgba(0, 255, 157, 0.05); text-transform: uppercase; letter-spacing: 0.5px; }
+        .project-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); padding: 4px 10px; border: 1px solid var(--border); background: rgba(0, 255, 157, 0.06); text-transform: uppercase; letter-spacing: 0.5px; }
         .project-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
         .project-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; flex: 1; }
         .project-link { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.3s ease; }
         .project-link::after { content: '→'; transition: transform 0.3s ease; }
         .project-link:hover::after { transform: translateX(4px); }
+        .project-details { border-top: 1px solid var(--border); margin: 4px 0 22px; padding-top: 16px; display: grid; gap: 14px; }
+        .project-detail { display: grid; grid-template-columns: 92px 1fr; gap: 12px; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+        .project-detail-label { color: var(--accent); font: 500 10px/1.5 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .6px; }
         .project-card.placeholder { opacity: 0.45; cursor: default; pointer-events: none; }
         .project-card.placeholder .project-image svg { opacity: 0.15; }
         .project-card.placeholder::after { content: 'СКОРО'; position: absolute; top: 16px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); padding: 4px 10px; border: 1px solid var(--accent); z-index: 10; background: var(--bg); }
@@ -369,6 +378,14 @@
         .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
         .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
         .service-price { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: var(--accent); }
+        .service-case-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--accent); text-decoration: none; font: 500 12px/1.5 'JetBrains Mono', monospace; }
+        .service-case-link::after { content: '↗'; transition: transform .2s ease; }
+        .service-case-link:hover::after { transform: translate(2px, -2px); }
+        .learning-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+        .learning-card { min-height: 178px; background: linear-gradient(145deg, rgba(0,255,157,.075), rgba(20,26,21,.3) 65%), var(--bg-card); border: 1px solid var(--border); padding: 24px; }
+        .learning-index { color: var(--accent); font: 500 11px 'JetBrains Mono', monospace; margin-bottom: 20px; display: block; }
+        .learning-card h3 { color: var(--text); font-size: 17px; margin-bottom: 8px; }
+        .learning-card p { color: var(--text-muted); font-size: 13px; line-height: 1.7; }
         .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
         .tech-item { background: var(--bg-card); border: 1px solid var(--border); padding: 24px 16px; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .tech-item:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-4px); }
@@ -392,14 +409,14 @@
         .faq-item.active .faq-answer { max-height: 400px; padding: 0 28px 24px; }
         .contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; }
         .contact-card { background: var(--bg-card); border: 1px solid var(--border); padding: 32px; text-decoration: none; transition: all 0.3s ease; display: flex; flex-direction: column; gap: 8px; }
-        .contact-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0, 255, 157, 0.1); }
+        .contact-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0, 255, 157, 0.08); }
         .contact-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
         .contact-value { font-size: 18px; color: var(--text); font-weight: 500; }
         .contact-hint { font-size: 13px; color: var(--text-muted); }
-        .tg-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 998; box-shadow: 0 0 30px rgba(0, 255, 157, 0.5); transition: all 0.3s ease; animation: floatPulse 2s infinite; }
-        .tg-float:hover { transform: scale(1.1); box-shadow: 0 0 50px rgba(0, 255, 157, 0.8); }
+        .tg-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 998; box-shadow: 0 0 30px rgba(0, 255, 157, 0.2); transition: all 0.3s ease; animation: floatPulse 2s infinite; }
+        .tg-float:hover { transform: scale(1.1); box-shadow: 0 0 50px rgba(0, 255, 157, 0.28); }
         .tg-float svg { width: 28px; height: 28px; fill: var(--bg); margin-right: -2px; }
-        @keyframes floatPulse { 0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 157, 0.5); } 50% { box-shadow: 0 0 50px rgba(0, 255, 157, 0.8); } }
+        @keyframes floatPulse { 0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 157, 0.2); } 50% { box-shadow: 0 0 50px rgba(0, 255, 157, 0.28); } }
         footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); }
         footer .accent { color: var(--accent); }
         @media (max-width: 1024px) {
@@ -460,6 +477,7 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#about" data-ru="обо мне" data-en="about">обо мне</a></li>
+                    <li><a href="#learning" data-ru="учу" data-en="learning">учу</a></li>
                     <li><a href="#process" data-ru="процесс" data-en="process">процесс</a></li>
                     <li><a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a></li>
                     <li><a href="#services" data-ru="услуги" data-en="services">услуги</a></li>
@@ -498,6 +516,7 @@
         </div>
         <nav class="mobile-menu-nav">
             <a href="#about" data-ru="обо мне" data-en="about">обо мне</a>
+            <a href="#learning" data-ru="сейчас учусь" data-en="learning now">сейчас учусь</a>
             <a href="#process" data-ru="процесс" data-en="process">процесс</a>
             <a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a>
             <a href="#services" data-ru="услуги" data-en="services">услуги</a>
@@ -520,7 +539,13 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-tag" data-ru="Доступен для проектов" data-en="Available for projects">Доступен для проектов</span>
+                <div class="hero-meta">
+                    <div class="hero-byline">
+                        <span class="hero-monogram" aria-hidden="true">И</span>
+                        <span class="hero-byline-copy"><strong>Иван</strong><span data-ru="Личные и учебные проекты" data-en="Personal and learning projects">Личные и учебные проекты</span></span>
+                    </div>
+                    <span class="hero-tag" data-ru="Доступен для проектов" data-en="Available for projects">Доступен для проектов</span>
+                </div>
                 <h1><span data-ru="Сайты и автоматизация" data-en="Websites and automation">Сайты и автоматизация</span><br><span data-ru="на" data-en="with">на</span> <span class="accent">n8n</span></h1>
                 <p data-ru="Делаю сайты и автоматизации на n8n. В портфолио — сайт психолога и учебный интернет-магазин. Сейчас развиваюсь в веб-разработке и автоматизации." data-en="I build websites and n8n automations. My portfolio includes a psychologist's website and a practice e-commerce project. I am currently growing my web development and automation skills.">Делаю сайты и автоматизации на n8n. В портфолио — сайт психолога и учебный интернет-магазин. Сейчас развиваюсь в веб-разработке и автоматизации.</p>
                 <div class="hero-buttons">
@@ -544,7 +569,7 @@
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">ls ./services</span></span>
             <span class="terminal-line"><span class="out">→ sites/ bots/ automation/ integrations/</span></span>
             <span class="terminal-line"><span class="prompt">$</span><span class="cmd">status</span></span>
-            <span class="terminal-line"><span class="out" data-ru="→ ● Свободен для новых проектов" data-en="→ ● Available for new projects">→ <span style="color: #00ff9d;">●</span> Свободен для новых проектов</span></span>
+            <span class="terminal-line"><span class="out" data-ru="→ ● Свободен для новых проектов" data-en="→ ● Available for new projects">→ <span style="color: var(--accent);">●</span> Свободен для новых проектов</span></span>
         </div>
     </div>
 
@@ -554,7 +579,7 @@
             <h2><span data-ru="Обо" data-en="About">Обо</span> <span class="accent" data-ru="мне" data-en="me">мне</span></h2>
             <div class="about-grid">
                 <div class="about-card">
-                    <div class="about-avatar">V</div>
+                    <div class="about-avatar">И</div>
                     <h3 data-ru="Иван" data-en="Ivan">Иван</h3>
                     <div class="role">// automation developer</div>
                     <div class="info-item"><span class="key" data-ru="опыт:" data-en="exp:">опыт:</span><span data-ru="1+ год в автоматизации" data-en="1+ year in automation">1+ год в автоматизации</span></div>
@@ -563,7 +588,7 @@
                     <div class="info-item"><span class="key" data-ru="формат:" data-en="format:">формат:</span><span data-ru="Удалённо, по всему миру" data-en="Remote, worldwide">Удалённо, по всему миру</span></div>
                 </div>
                 <div class="about-text">
-                    <p data-ru="Привет! Меня зовут Иван, и я занимаюсь автоматизацией бизнес-процессов на платформе n8n с использованием AI." data-en="Hi! My name is Ivan, and I do business process automation on the n8n platform using AI.">Привет! Меня зовут Иван, и я занимаюсь автоматизацией бизнес-процессов на платформе n8n с использованием AI.</p>
+                    <p data-ru="Привет! Я Иван. Изучаю веб-разработку и автоматизацию на n8n на личных и учебных проектах." data-en="Hi, I'm Ivan. I'm learning web development and n8n automation through personal and practice projects.">Привет! Я Иван. Изучаю веб-разработку и автоматизацию на n8n на личных и учебных проектах.</p>
                     <p data-ru="Использую HTML, CSS, JavaScript и AI-инструменты. Для автоматизации заявок настраиваю n8n и передачу данных в Telegram." data-en="I use HTML, CSS, JavaScript and AI tools. For request automation, I set up n8n workflows that send data to Telegram.">Использую HTML, CSS, JavaScript и AI-инструменты. Для автоматизации заявок настраиваю n8n и передачу данных в Telegram.</p>
                     <p data-ru="Сначала обсуждаем задачу и её объём. Затем я предлагаю подход и согласую сроки до начала работы." data-en="First, we discuss the task and its scope. Then I suggest an approach and agree on a timeline before starting.">Сначала обсуждаем задачу и её объём. Затем я предлагаю подход и согласую сроки до начала работы.</p>
                     <div class="skills-grid">
@@ -577,6 +602,18 @@
                         <div class="skill-item">GitHub Pages</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal" id="learning">
+        <div class="container">
+            <span class="section-tag" data-ru="сейчас / учусь" data-en="now / learning">сейчас / учусь</span>
+            <h2><span data-ru="Сейчас" data-en="Currently">Сейчас</span> <span class="accent" data-ru="изучаю" data-en="learning">изучаю</span></h2>
+            <div class="learning-grid">
+                <article class="learning-card"><span class="learning-index">01 — FRONTEND</span><h3 data-ru="Веб-разработка" data-en="Web development">Веб-разработка</h3><p data-ru="Закрепляю HTML, CSS и JavaScript на собственных страницах и интерфейсах." data-en="Practicing HTML, CSS and JavaScript by building my own pages and interfaces.">Закрепляю HTML, CSS и JavaScript на собственных страницах и интерфейсах.</p></article>
+                <article class="learning-card"><span class="learning-index">02 — WORKFLOWS</span><h3 data-ru="Автоматизация" data-en="Automation">Автоматизация</h3><p data-ru="Разбираюсь, как надёжно передавать заявки из форм в Telegram через n8n." data-en="Learning to reliably route form requests to Telegram with n8n.">Разбираюсь, как надёжно передавать заявки из форм в Telegram через n8n.</p></article>
+                <article class="learning-card"><span class="learning-index">03 — DATA</span><h3>Supabase</h3><p data-ru="Изучаю авторизацию, профили и сохранение данных на примере магазина ExoTech." data-en="Exploring authentication, profiles and data storage in my ExoTech store project.">Изучаю авторизацию, профили и сохранение данных на примере магазина ExoTech.</p></article>
             </div>
         </div>
     </section>
@@ -600,25 +637,33 @@
             <span class="section-tag">03 / portfolio</span>
             <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="работы" data-en="works">работы</span></h2>
             <div class="portfolio-grid">
-                <div class="project-card">
+                <div class="project-card" id="case-psy">
                     <div class="project-image">
                         <img src="portfolio-psy.svg" alt="Превью сайта психолога «Тихое место»" loading="lazy">
                     </div>
                     <div class="project-body">
                         <div class="project-tags"><span class="project-tag" data-ru="сайт" data-en="website">сайт</span><span class="project-tag">n8n</span><span class="project-tag" data-ru="форма заявок" data-en="request form">форма заявок</span><span class="project-tag">Telegram</span></div>
                         <h3 data-ru="Сайт психолога и приём заявок" data-en="Psychologist website and request flow">Сайт психолога и приём заявок</h3>
-                        <p class="project-desc" data-ru="Сайт для психолога Елизаветы Золотовой. Настроил форму и автоматизацию на n8n: заявки с сайта приходят ей в Telegram." data-en="A website for psychologist Elizaveta Zolotova. I set up the form and an n8n workflow so website requests reach her in Telegram.">Сайт для психолога Елизаветы Золотовой. Настроил форму и автоматизацию на n8n: заявки с сайта приходят ей в Telegram.</p>
+                        <p class="project-desc" data-ru="Сайт для психолога Елизаветы Золотовой с формой записи и автоматической передачей заявок в Telegram." data-en="A website for psychologist Elizaveta Zolotova, with a request form and automatic delivery of submissions to Telegram.">Сайт для психолога Елизаветы Золотовой с формой записи и автоматической передачей заявок в Telegram.</p>
+                        <div class="project-details">
+                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Собрал сайт с AI-инструментами, настроил форму и связал её с Telegram через n8n." data-en="Built the site with AI tools, set up the form and connected it to Telegram through n8n.">Собрал сайт с AI-инструментами, настроил форму и связал её с Telegram через n8n.</span></div>
+                            <div class="project-detail"><span class="project-detail-label" data-ru="Результат" data-en="Outcome">Результат</span><span data-ru="Заявки с сайта автоматически приходят Елизавете в Telegram." data-en="Website requests are delivered to Elizaveta in Telegram.">Заявки с сайта автоматически приходят Елизавете в Telegram.</span></div>
+                        </div>
                         <a href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Посмотреть проект" data-en="View project">Посмотреть проект</a>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" id="case-shop">
                     <div class="project-image">
                         <img src="portfolio-shop.svg" alt="Превью учебного интернет-магазина ExoTech" loading="lazy">
                     </div>
                     <div class="project-body">
                         <div class="project-tags"><span class="project-tag" data-ru="учебный проект" data-en="practice project">учебный проект</span><span class="project-tag">HTML/CSS/JS</span><span class="project-tag">Supabase</span></div>
                         <h3 data-ru="Интернет-магазин ExoTech" data-en="ExoTech online store">Интернет-магазин ExoTech</h3>
-                        <p class="project-desc" data-ru="Личный учебный проект: каталог с фильтрами, карточки товаров, корзина, личный кабинет и сохранение заказов в Supabase. Платёжного сервиса в проекте нет." data-en="A personal practice project: a filterable catalog, product pages, cart, account area and order storage in Supabase. It does not include a payment provider.">Личный учебный проект: каталог с фильтрами, карточки товаров, корзина, личный кабинет и сохранение заказов в Supabase. Платёжного сервиса в проекте нет.</p>
+                        <p class="project-desc" data-ru="Личный учебный проект — интернет-магазин игровой периферии с каталогом и оформлением заказа." data-en="A personal practice project: an online store for gaming peripherals with a catalog and order flow.">Личный учебный проект — интернет-магазин игровой периферии с каталогом и оформлением заказа.</p>
+                        <div class="project-details">
+                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Сделал каталог с фильтрами, страницы товаров, корзину, регистрацию и личный кабинет." data-en="Built a filterable catalog, product pages, cart, sign-up and an account area.">Сделал каталог с фильтрами, страницы товаров, корзину, регистрацию и личный кабинет.</span></div>
+                            <div class="project-detail"><span class="project-detail-label" data-ru="Данные" data-en="Data">Данные</span><span data-ru="Подключил Supabase для аккаунтов и сохранения заказов. Оплаты на сайте нет." data-en="Connected Supabase for accounts and order storage. The demo does not take payments.">Подключил Supabase для аккаунтов и сохранения заказов. Оплаты на сайте нет.</span></div>
+                        </div>
                         <a href="https://vanek2111.github.io/vanek-shop/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Открыть демо магазина" data-en="Open store demo">Открыть демо магазина</a>
                     </div>
                 </div>
@@ -631,9 +676,9 @@
             <span class="section-tag">04 / services</span>
             <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="направления" data-en="focus areas">направления</span></h2>
             <div class="services-grid">
-                <div class="service-card"><span class="service-number">// 01</span><h3 data-ru="Сайты и лендинги" data-en="Websites and landing pages">Сайты и лендинги</h3><p data-ru="Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу." data-en="I build responsive websites with AI tools and adapt them to a specific task.">Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div></div>
-                <div class="service-card"><span class="service-number">// 02</span><h3 data-ru="Формы и уведомления" data-en="Forms and notifications">Формы и уведомления</h3><p data-ru="Связываю форму на сайте с Telegram через n8n, чтобы заявки приходили в нужное место." data-en="I connect website forms to Telegram through n8n so requests reach the right place.">Связываю форму на сайте с Telegram через n8n, чтобы заявки приходили в нужное место.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div></div>
-                <div class="service-card"><span class="service-number">// 03</span><h3 data-ru="Учебные веб-проекты" data-en="Practice web projects">Учебные веб-проекты</h3><p data-ru="Пробую на практике каталог, фильтрацию, корзину и работу с Supabase — например, в ExoTech." data-en="I practice catalogs, filtering, carts and Supabase integration in projects such as ExoTech.">Пробую на практике каталог, фильтрацию, корзину и работу с Supabase — например, в ExoTech.</p><div class="service-price" data-ru="Объём и стоимость обсуждаем отдельно" data-en="Scope and price discussed individually">Объём и стоимость обсуждаем отдельно</div></div>
+                <div class="service-card"><span class="service-number">// 01</span><h3 data-ru="Сайты и лендинги" data-en="Websites and landing pages">Сайты и лендинги</h3><p data-ru="Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу." data-en="I build responsive websites with AI tools and adapt them to a specific task.">Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div><a class="service-case-link" href="#case-psy" data-ru="Смотреть кейс" data-en="See case">Смотреть кейс</a></div>
+                <div class="service-card"><span class="service-number">// 02</span><h3 data-ru="Формы и уведомления" data-en="Forms and notifications">Формы и уведомления</h3><p data-ru="Связываю форму на сайте с Telegram через n8n, чтобы заявки приходили в нужное место." data-en="I connect website forms to Telegram through n8n so requests reach the right place.">Связываю форму на сайте с Telegram через n8n, чтобы заявки приходили в нужное место.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div><a class="service-case-link" href="#case-psy" data-ru="Смотреть пример" data-en="See example">Смотреть пример</a></div>
+                <div class="service-card"><span class="service-number">// 03</span><h3 data-ru="Учебные веб-проекты" data-en="Practice web projects">Учебные веб-проекты</h3><p data-ru="Пробую на практике каталог, фильтрацию, корзину и работу с Supabase — например, в ExoTech." data-en="I practice catalogs, filtering, carts and Supabase integration in projects such as ExoTech.">Пробую на практике каталог, фильтрацию, корзину и работу с Supabase — например, в ExoTech.</p><div class="service-price" data-ru="Объём и стоимость обсуждаем отдельно" data-en="Scope and price discussed individually">Объём и стоимость обсуждаем отдельно</div><a class="service-case-link" href="#case-shop" data-ru="Смотреть ExoTech" data-en="See ExoTech">Смотреть ExoTech</a></div>
             </div>
         </div>
     </section>
