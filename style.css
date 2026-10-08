@@ -490,7 +490,7 @@ section h2 .accent { color: var(--accent); }
 .process-step p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
 /* ============ PORTFOLIO ============ */
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
 .project-card {
     scroll-margin-top: 110px;
@@ -518,6 +518,7 @@ section h2 .accent { color: var(--accent); }
 .project-card:hover .project-image svg { opacity: 1; transform: scale(1.1); }
 
 .project-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 2%; display: block; }
+.project-card-forma .project-image img { object-position: center 54%; }
 
 .project-number {
     position: absolute;
