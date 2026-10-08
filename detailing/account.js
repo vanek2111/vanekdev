@@ -32,7 +32,7 @@
     document.querySelector('#overview-bookings').innerHTML=bookings.length?bookings.slice(0,3).map(item=>bookingCard(item)).join(''):renderEmpty('Пока нет записей. Выберите услугу и оставьте первую заявку.');
     document.querySelector('#all-bookings').innerHTML=bookings.length?bookings.map(item=>bookingCard(item)).join(''):renderEmpty('История появится здесь после первой записи.');
     const select=document.querySelector('#booking-car');
-    select.innerHTML='<option value="">Не указывать автомобиль</option>'+vehicles.map(car=>`<option value="${car.id}">${carLabel(car)}</option>`).join('');
+    select.innerHTML=vehicles.length?vehicles.map(car=>`<option value="${car.id}">${carLabel(car)}</option>`).join('')+'<option value="">Не указывать автомобиль</option>':'<option value="" disabled selected>Добавьте автомобиль в профиль</option>';
   }
   async function openPortal(user) {
     try {
