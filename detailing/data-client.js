@@ -36,10 +36,10 @@
       const {data,error}=await db.auth.signUp({email:input.email,password:input.password,options:{data:{full_name:input.name,phone:input.phone}}});
       if (error) fail(error);
       const confirmationRequired=Boolean(data.user&&!data.session);
-      // With email confirmation enabled, signUp returns a user but no session.
-      // Do not query RLS-protected profile/staff tables until the user confirms
-      // their address and signs in.
-      const user=data.user?data.session?await publicUser(data.user):{
+      // Registration can return without a session when email confirmation is
+      // enabled. Build the immediate response from auth metadata and defer
+      // profile/staff table reads to the normal sign-in flow.
+      const user=data.user?{
         id:data.user.id,
         name:data.user.user_metadata?.full_name||data.user.email?.split('@')[0]||'',
         email:data.user.email||'',
