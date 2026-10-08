@@ -17,7 +17,9 @@
   function bookingCard(item, staff=false){
     const contact=staff?`<small>${safe(item.name)} · ${safe(item.contact)}${item.email?' · '+safe(item.email):''}</small>`:'';
     const statusControl=staff?`<select class="status-select" data-booking-status="${safe(item.public_id)}" aria-label="Изменить статус заявки">${Object.entries(statusNames).map(([value,label])=>`<option value="${value}" ${item.status===value?'selected':''}>${label}</option>`).join('')}</select>`:`<span class="booking-status">${safe(statusNames[item.status]||item.status)}</span>`;
-    return `<article class="data-row"><span class="data-row-main"><strong>${safe(item.service)}</strong><small>${safe(item.vehicle_label||'Автомобиль не указан')} · ${safe(item.public_id)} · ${safe(date(item.created_at))}</small>${contact}${item.message?`<small>${safe(item.message)}</small>`:''}</span><span class="data-row-side">${statusControl}</span></article>`;
+    const linkedVehicle=vehicles.find(car=>car.id===item.vehicle_id);
+    const vehicleLabel=item.vehicle_label|| (linkedVehicle?[linkedVehicle.make,linkedVehicle.model,linkedVehicle.color].filter(Boolean).join(' · '):'Автомобиль не указан');
+    return `<article class="data-row"><span class="data-row-main"><strong>${safe(item.service)}</strong><small>${safe(vehicleLabel)} · ${safe(item.public_id)} · ${safe(date(item.created_at))}</small>${contact}${item.message?`<small>${safe(item.message)}</small>`:''}</span><span class="data-row-side">${statusControl}</span></article>`;
   }
   function render() {
     const firstName=(currentUser.name||'').trim().split(/\s+/)[0]||'Добро пожаловать';
@@ -101,7 +103,9 @@
     const data=Object.fromEntries(new FormData(form));
     const wantedDate=data.preferredDate?new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'long',year:'numeric'}).format(new Date(`${data.preferredDate}T12:00:00`)):'';
     const message=[wantedDate?`Желаемая дата: ${wantedDate}`:'',data.message].filter(Boolean).join('\n');
-    try {const result=await api('bookings',{method:'POST',body:JSON.stringify({name:currentUser.name,contact:currentUser.phone,vehicle_id:data.vehicleId||null,vehicleId:data.vehicleId||null,vehicle_label:'',service:data.service,message})});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;form.reset();bookings=(await api('bookings')).bookings;render();}
+    const selectedVehicle=vehicles.find(car=>car.id===data.vehicleId);
+    const vehicleLabel=selectedVehicle?[selectedVehicle.make,selectedVehicle.model,selectedVehicle.color].filter(Boolean).join(' · '):'';
+    try {const result=await api('bookings',{method:'POST',body:JSON.stringify({name:currentUser.name,contact:currentUser.phone,vehicle_id:data.vehicleId||null,vehicleId:data.vehicleId||null,vehicle_label:vehicleLabel,service:data.service,message})});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;form.reset();bookings=(await api('bookings')).bookings;render();}
     catch(error){status.textContent=error.message;}
   });
   const preferredDate=document.querySelector('#booking-date');
