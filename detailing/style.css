@@ -60,10 +60,10 @@
 .gallery-head,.gallery-grid{max-width:1250px;margin-right:auto;margin-left:auto}
 .gallery-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:42px}
 .gallery-head .eyebrow{margin-bottom:14px}
-.gallery-head h2{margin:0;font-size:clamp(46px,6.2vw,76px);line-height:.98;letter-spacing:-.08em;font-weight:500}
+.gallery-head h2{margin:0;font-size:clamp(42px,5.2vw,66px);line-height:.98;letter-spacing:-.08em;font-weight:500}
 .gallery-head h2 em{color:var(--gold2);font-style:normal;font-weight:400}
 .gallery-head>p{max-width:340px;margin:0 0 4px;color:#969691;font-size:12px;line-height:1.8}
-.gallery-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);align-items:end;gap:22px}
+.gallery-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);align-items:start;gap:22px}
 .gallery-card{min-width:0;margin:0;border:1px solid #333436;background:#111213}
 .gallery-image{position:relative;overflow:hidden;aspect-ratio:1.35;background:#1c1d1f}
 .gallery-card-wide .gallery-image{aspect-ratio:1.55}
