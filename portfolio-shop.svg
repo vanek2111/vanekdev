@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">ExoTech — учебный интернет-магазин игровой периферии</title>
+  <desc id="desc">Превью главной страницы магазина: тёмная шапка, яркий зелёный акцент, заголовок и карточки товаров.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22232a"/><stop offset="1" stop-color="#111216"/></linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#292b32"/><stop offset="1" stop-color="#191a20"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9f31d"/><stop offset="1" stop-color="#9cc900"/></linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <rect x="0" y="0" width="960" height="36" fill="#c9f31d"/>
+  <text x="480" y="24" fill="#171810" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">ИГРОВАЯ ПЕРИФЕРИЯ · EXOTECH</text>
+  <rect x="0" y="36" width="960" height="66" fill="#191a20"/>
+  <rect x="38" y="54" width="30" height="30" rx="5" fill="url(#green)"/>
+  <path d="M47 62l13 13m0-13L47 75" stroke="#18191b" stroke-width="3"/>
+  <text x="78" y="76" fill="#f2f2f1" font-family="Arial,sans-serif" font-size="19" font-weight="800">EXO<tspan fill="#c9f31d">TECH</tspan></text>
+  <text x="555" y="75" fill="#b6b7ba" font-family="Arial,sans-serif" font-size="13">Каталог</text>
+  <text x="635" y="75" fill="#b6b7ba" font-family="Arial,sans-serif" font-size="13">Отзывы</text>
+  <text x="715" y="75" fill="#b6b7ba" font-family="Arial,sans-serif" font-size="13">Контакты</text>
+  <circle cx="884" cy="69" r="17" fill="#292a30" stroke="#494a50"/>
+  <path d="M878 63h3l2 8h8l2-6h-11" fill="none" stroke="#d8d9dc" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="38" y="128" width="884" height="276" rx="8" fill="url(#hero)"/>
+  <circle cx="771" cy="263" r="148" fill="#c9f31d" opacity=".07"/>
+  <circle cx="771" cy="263" r="102" fill="#c9f31d" opacity=".06"/>
+  <rect x="76" y="166" width="190" height="27" rx="13.5" fill="#c9f31d" opacity=".12"/>
+  <text x="171" y="184" fill="#d5f36a" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1">ДЛЯ ТЕХ, КТО ИГРАЕТ ВСЕРЬЁЗ</text>
+  <text x="76" y="250" fill="#f5f5f3" font-family="Arial,sans-serif" font-size="45" font-weight="900" letter-spacing="1">ПЕРИФЕРИЯ</text>
+  <text x="76" y="299" fill="#f5f5f3" font-family="Arial,sans-serif" font-size="45" font-weight="900" letter-spacing="1">ДЛЯ <tspan fill="#c9f31d">ПОБЕД</tspan></text>
+  <text x="78" y="329" fill="#a3a4a8" font-family="Arial,sans-serif" font-size="14">Каталог игровой периферии · ExoTech</text>
+  <rect x="76" y="350" width="174" height="38" rx="4" fill="url(#green)"/>
+  <text x="163" y="374" fill="#171810" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="800">СМОТРЕТЬ КАТАЛОГ</text>
+  <g transform="translate(671 181) rotate(-13)">
+    <path d="M32 6c-19 0-34 17-34 39v91c0 20 12 36 29 40l10-5 8-21V32C45 16 41 6 32 6z" fill="#3b3c43" stroke="#74757a" stroke-width="2"/>
+    <path d="M45 32v118" stroke="#717279" stroke-width="2"/>
+    <path d="M23 34v31" stroke="#c9f31d" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="34" cy="22" r="3" fill="#c9f31d"/>
+  </g>
+  <text x="38" y="449" fill="#f0f0ed" font-family="Arial,sans-serif" font-size="19" font-weight="700">Категории</text>
+  <text x="922" y="449" fill="#aeb0b1" text-anchor="end" font-family="Arial,sans-serif" font-size="12">Соберите сетап мечты</text>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <rect x="38" y="470" width="207" height="99" rx="6" fill="#1d1e24" stroke="#33343b"/><rect x="56" y="486" width="52" height="52" rx="26" fill="#c9f31d" opacity=".1"/><path d="M82 495v24m-8-16c0-11 16-11 16 0v16c0 11-16 11-16 0z" fill="none" stroke="#c9f31d" stroke-width="2"/><text x="82" y="557" fill="#dddddb" font-size="12">Мышки</text>
+    <rect x="260" y="470" width="207" height="99" rx="6" fill="#1d1e24" stroke="#33343b"/><rect x="278" y="486" width="52" height="52" rx="26" fill="#c9f31d" opacity=".1"/><rect x="289" y="501" width="30" height="20" rx="3" fill="none" stroke="#c9f31d" stroke-width="2"/><path d="M294 507h2m5 0h2m5 0h2m-14 7h18" stroke="#c9f31d" stroke-width="2"/><text x="304" y="557" fill="#dddddb" font-size="12">Клавиатуры</text>
+    <rect x="483" y="470" width="207" height="99" rx="6" fill="#1d1e24" stroke="#33343b"/><rect x="501" y="486" width="52" height="52" rx="26" fill="#c9f31d" opacity=".1"/><path d="M511 516v-5a16 16 0 0 1 32 0v5m-32-2h7v14h-3a4 4 0 0 1-4-4zm32 0h-7v14h3a4 4 0 0 0 4-4z" fill="none" stroke="#c9f31d" stroke-width="2"/><text x="527" y="557" fill="#dddddb" font-size="12">Наушники</text>
+    <rect x="706" y="470" width="216" height="99" rx="6" fill="#1d1e24" stroke="#33343b"/><rect x="724" y="486" width="52" height="52" rx="26" fill="#c9f31d" opacity=".1"/><rect x="735" y="494" width="30" height="22" rx="3" fill="none" stroke="#c9f31d" stroke-width="2"/><path d="M750 516v8m-8 0h16" stroke="#c9f31d" stroke-width="2"/><text x="750" y="557" fill="#dddddb" font-size="12">Мониторы</text>
+  </g>
+</svg>
