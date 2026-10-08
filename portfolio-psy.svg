@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Тихое место — сайт психолога Елизаветы Золотовой</title>
+  <desc id="desc">Макет главной страницы в спокойных кремовых и шалфейных оттенках с записью на консультацию.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#faf7f2"/><stop offset="1" stop-color="#f1ece3"/></linearGradient>
+    <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfe8df"/><stop offset="1" stop-color="#bdcfbf"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#657469" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#paper)"/>
+  <rect x="0" y="0" width="960" height="1" fill="#e3ded5"/>
+  <circle cx="69" cy="51" r="23" fill="#8ba888"/>
+  <path d="M69 36v30m0 0c-6 0-10-5-10-11s4-10 10-10 10 4 10 10-4 11-10 11z" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="106" y="48" fill="#35443d" font-family="Georgia,serif" font-size="23" font-weight="700">Тихое место</text>
+  <text x="108" y="69" fill="#819683" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2.5">ПСИХОЛОГ ЕЛИЗАВЕТА</text>
+  <text x="610" y="58" fill="#58665e" font-family="Arial,sans-serif" font-size="13">Обо мне</text>
+  <text x="700" y="58" fill="#58665e" font-family="Arial,sans-serif" font-size="13">Как я работаю</text>
+  <text x="814" y="58" fill="#58665e" font-family="Arial,sans-serif" font-size="13">Контакты</text>
+  <rect x="870" y="35" width="70" height="38" rx="19" fill="#718b75"/>
+  <text x="905" y="59" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700">Записаться</text>
+  <path d="M0 96H960" stroke="#e6e1d8"/>
+  <text x="72" y="163" fill="#819683" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">ПСИХОЛОГИЧЕСКИЕ КОНСУЛЬТАЦИИ</text>
+  <text x="70" y="230" fill="#35443d" font-family="Georgia,serif" font-size="43">Можно начать</text>
+  <text x="70" y="279" fill="#35443d" font-family="Georgia,serif" font-size="43">с того, что</text>
+  <text x="70" y="328" fill="#718b75" font-family="Georgia,serif" font-size="43" font-style="italic">волнует сейчас.</text>
+  <text x="74" y="374" fill="#65716a" font-family="Arial,sans-serif" font-size="15">Психолог Золотова Елизавета.</text>
+  <text x="74" y="400" fill="#65716a" font-family="Arial,sans-serif" font-size="15">Бережно разбираемся с тревогой, стрессом,</text>
+  <text x="74" y="426" fill="#65716a" font-family="Arial,sans-serif" font-size="15">отношениями и тем, что важно именно вам.</text>
+  <rect x="72" y="462" width="260" height="48" rx="24" fill="#718b75" filter="url(#shadow)"/>
+  <text x="202" y="492" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="600">Записаться на консультацию</text>
+  <g filter="url(#shadow)">
+    <path d="M610 491V282a153 153 0 0 1 306 0v209z" fill="url(#sage)"/>
+    <circle cx="762" cy="280" r="99" fill="#f2e7d9" opacity=".85"/>
+    <path d="M762 354c-16-13-67-48-67-85 0-29 38-39 67-6 29-33 67-23 67 6 0 37-51 72-67 85z" fill="#cf8974" opacity=".88"/>
+    <path d="M690 399c20-17 40-28 59-34 10-3 17 8 9 15l-22 19c26-4 49 1 69 14 9 6 5 19-6 19h-92c-14 0-24-18-17-33zm144 0c-20-17-40-28-59-34-10-3-17 8-9 15l22 19c-26-4-49 1-69 14-9 6-5 19 6 19h92c14 0 24-18 17-33z" fill="#f8f4ec" stroke="#aa897d" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M670 462h184" stroke="#8ba888" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+  </g>
+  <rect x="637" y="473" width="252" height="57" rx="8" fill="#faf7f2" filter="url(#shadow)"/>
+  <text x="763" y="498" fill="#526157" text-anchor="middle" font-family="Georgia,serif" font-size="16">Тихое место для</text>
+  <text x="763" y="518" fill="#526157" text-anchor="middle" font-family="Georgia,serif" font-size="16">честного разговора</text>
+</svg>
