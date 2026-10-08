@@ -13,6 +13,7 @@
 
   async function signedUser() {
     const {data,error}=await db.auth.getUser();
+    if (error?.name==='AuthSessionMissingError') return null;
     if (error) fail(error);
     return data.user;
   }
