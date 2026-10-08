@@ -93,15 +93,19 @@
   }));
   document.querySelectorAll('[data-open-view]').forEach(link=>link.addEventListener('click',()=>document.querySelector(`[data-portal-view="${link.dataset.openView}"]`).click()));
   document.querySelector('#car-form').addEventListener('submit',async event=>{
-    event.preventDefault();const status=document.querySelector('#car-status');status.textContent='Сохраняем…';
-    try {await api('vehicles',{method:'POST',body:JSON.stringify(Object.fromEntries(new FormData(event.currentTarget)))});event.currentTarget.reset();vehicles=(await api('vehicles')).vehicles;render();status.textContent='Автомобиль добавлен в профиль.';}catch(error){status.textContent=error.message;}
+    event.preventDefault();const form=event.currentTarget,status=document.querySelector('#car-status');status.textContent='Сохраняем…';
+    try {await api('vehicles',{method:'POST',body:JSON.stringify(Object.fromEntries(new FormData(form)))});form.reset();vehicles=(await api('vehicles')).vehicles;render();status.textContent='Автомобиль добавлен в профиль.';}catch(error){status.textContent=error.message;}
   });
   document.querySelector('#portal-booking-form').addEventListener('submit',async event=>{
-    event.preventDefault();const status=document.querySelector('#booking-status');status.textContent='Отправляем…';
-    const data=Object.fromEntries(new FormData(event.currentTarget));
-    try {const result=await api('bookings',{method:'POST',body:JSON.stringify({name:currentUser.name,contact:currentUser.phone,vehicle_id:data.vehicleId||null,vehicleId:data.vehicleId||null,vehicle_label:'',service:data.service,message:data.message})});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;event.currentTarget.reset();bookings=(await api('bookings')).bookings;render();}
+    event.preventDefault();const form=event.currentTarget,status=document.querySelector('#booking-status');status.textContent='Отправляем…';
+    const data=Object.fromEntries(new FormData(form));
+    const wantedDate=data.preferredDate?new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'long',year:'numeric'}).format(new Date(`${data.preferredDate}T12:00:00`)):'';
+    const message=[wantedDate?`Желаемая дата: ${wantedDate}`:'',data.message].filter(Boolean).join('\n');
+    try {const result=await api('bookings',{method:'POST',body:JSON.stringify({name:currentUser.name,contact:currentUser.phone,vehicle_id:data.vehicleId||null,vehicleId:data.vehicleId||null,vehicle_label:'',service:data.service,message})});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;form.reset();bookings=(await api('bookings')).bookings;render();}
     catch(error){status.textContent=error.message;}
   });
+  const preferredDate=document.querySelector('#booking-date');
+  if(preferredDate){const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());preferredDate.min=today.toISOString().slice(0,10);}
   async function loadStaff(){
     const target=document.querySelector('#staff-bookings');target.innerHTML=renderEmpty('Загружаем заявки…');
     try {const result=await api('studio/bookings');target.innerHTML=result.bookings.length?result.bookings.map(item=>bookingCard(item,true)).join(''):renderEmpty('Новых заявок пока нет.');
