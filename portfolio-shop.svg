@@ -67,7 +67,7 @@
   <g>
     <rect x="55" y="480" width="274" height="103" rx="5" fill="#202126" stroke="#35363b"/>
     <rect x="63" y="488" width="120" height="86" rx="3" fill="url(#photo)"/>
-    <g clip-path="url(#mousePhoto)"><image href="https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h08/h61/9765618188318/viper-v3-pro-black-500x500.png" x="63" y="488" width="120" height="86" preserveAspectRatio="xMidYMid meet"/></g>
+    <g clip-path="url(#mousePhoto)"><image href="assets/exotech-razer-viper.png" x="63" y="488" width="120" height="86" preserveAspectRatio="xMidYMid meet"/></g>
     <text x="195" y="509" fill="#eeeeed" font-family="Arial,sans-serif" font-size="10" font-weight="700">RAZER VIPER V3 PRO</text>
     <text x="195" y="528" fill="#929399" font-family="Arial,sans-serif" font-size="8">RAZER · игровая мышь</text>
     <text x="195" y="554" fill="#f0f0ef" font-family="Arial,sans-serif" font-size="14" font-weight="700">19 900 ₽</text>
@@ -75,7 +75,7 @@
 
     <rect x="343" y="480" width="274" height="103" rx="5" fill="#202126" stroke="#35363b"/>
     <rect x="351" y="488" width="120" height="86" rx="3" fill="url(#photo)"/>
-    <g clip-path="url(#pulsarPhoto)"><image href="https://www.pulsar.gg/cdn/shop/products/X2V2gamingmouse_mini_Black_Top_12b44160-e168-42e6-8ccc-d3d59fd72186-677459.png?v=1718795896" x="351" y="488" width="120" height="86" preserveAspectRatio="xMidYMid meet"/></g>
+    <g clip-path="url(#pulsarPhoto)"><image href="assets/exotech-pulsar-x2v2.png" x="351" y="488" width="120" height="86" preserveAspectRatio="xMidYMid meet"/></g>
     <text x="483" y="509" fill="#eeeeed" font-family="Arial,sans-serif" font-size="10" font-weight="700">PULSAR X2V2 MINI</text>
     <text x="483" y="528" fill="#929399" font-family="Arial,sans-serif" font-size="8">PULSAR · игровая мышь</text>
     <text x="483" y="554" fill="#f0f0ef" font-family="Arial,sans-serif" font-size="14" font-weight="700">10 500 ₽</text>
