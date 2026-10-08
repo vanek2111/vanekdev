@@ -1,0 +1,4 @@
+window.FORMA_SUPABASE_CONFIG = {
+  url: 'https://bpqlrwjapgtbplkhwrfw.supabase.co',
+  publicKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwcWxyd2phcGd0YnBsa2h3cmZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE0OTExODksImV4cCI6MjEwNzA2NzE4OX0.eYKlTRoJrVmZzTo4Ob3myIlOMOr8eTNCNK1trGCxG84'
+};

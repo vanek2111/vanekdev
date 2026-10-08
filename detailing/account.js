@@ -1,16 +1,11 @@
 (() => {
-  const api = async (route, options={}) => {
-    const response = await fetch(`./api/${route}`, {credentials:'same-origin', signal:AbortSignal.timeout(8000), ...options, headers:{'Content-Type':'application/json',...(options.headers||{})}});
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(data.error || 'Не удалось выполнить запрос.');
-    return data;
-  };
+  const api=window.formaData.api;
   const authCard=document.querySelector('#auth-card'), portal=document.querySelector('#portal-section'), authForm=document.querySelector('#auth-form');
   const authStatus=document.querySelector('#auth-status');
   let currentAuthMode='login', currentUser=null, vehicles=[], bookings=[];
   const humanError = error => {
     if (error?.name==='TimeoutError' || error?.name==='AbortError') return 'Сервер долго не отвечает. Убедись, что он запущен, и попробуй ещё раз.';
-    if (error instanceof TypeError) return 'Нет связи с сервером. Запусти сайт командой npm start в папке detailing.';
+    if (error instanceof TypeError) return 'Нет связи с сервисом. Проверь интернет и попробуй ещё раз.';
     return error?.message || 'Что-то пошло не так. Попробуй ещё раз.';
   };
   const safe = value => String(value??'').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -85,6 +80,7 @@
     const fields=Object.fromEntries(new FormData(authForm));
     try {
       const result=await api(currentAuthMode==='login'?'login':'register',{method:'POST',body:JSON.stringify(fields)});
+      if(currentAuthMode==='register'&&result.confirmationRequired){authStatus.textContent='Аккаунт создан. Проверь почту и подтверди адрес, затем войди.';return;}
       await openPortal(result.user);
     } catch(error) {authStatus.textContent=humanError(error);}
     finally {button.disabled=false;button.innerHTML=original;}
@@ -103,7 +99,7 @@
   document.querySelector('#portal-booking-form').addEventListener('submit',async event=>{
     event.preventDefault();const status=document.querySelector('#booking-status');status.textContent='Отправляем…';
     const data=Object.fromEntries(new FormData(event.currentTarget));
-    try {const result=await api('bookings',{method:'POST',body:JSON.stringify(data)});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;event.currentTarget.reset();bookings=(await api('bookings')).bookings;render();}
+    try {const result=await api('bookings',{method:'POST',body:JSON.stringify({name:currentUser.name,contact:currentUser.phone,vehicle_id:data.vehicleId||null,vehicleId:data.vehicleId||null,vehicle_label:'',service:data.service,message:data.message})});status.textContent=`Заявка ${result.booking.number} сохранена. Студия свяжется с вами.`;event.currentTarget.reset();bookings=(await api('bookings')).bookings;render();}
     catch(error){status.textContent=error.message;}
   });
   async function loadStaff(){
