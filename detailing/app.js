@@ -34,7 +34,7 @@
       welcomeTitle.innerHTML = `${chosen[0]} <span>${view === 'overview' ? 'G90' : ''}</span>`;
       welcomeMeta.textContent = view === 'overview' ? '2025 · Чёрный сапфир · VIN ···· 8K21' : chosen[1];
       if (view === 'history') { orderType.textContent = 'ПОСЛЕДНИЙ ЗАКАЗ'; orderTitle.innerHTML = 'Оклейка передней части<br>полиуретановой плёнкой'; statusLabel.textContent = 'ИСТОРИЯ ОБСЛУЖИВАНИЯ'; }
-      else { orderType.textContent = 'КОМПЛЕКСНАЯ ЗАЩИТА'; orderTitle.innerHTML = 'Подготовка кузова<br>и оклейка PPF'; statusLabel.textContent = 'ТЕКУЩИЙ ЗАКАЗ'; }
+      else { orderType.textContent = 'КОМПЛЕКСНАЯ ЗАЩИТА'; orderTitle.innerHTML = 'Подготовка кузова<br>и защитная плёнка'; statusLabel.textContent = 'ТЕКУЩИЙ ЗАКАЗ'; }
     }
   };
 
@@ -51,7 +51,7 @@
     statusLabel.textContent = studioMode ? 'ЗАКАЗЫ В РАБОТЕ · 04' : 'ТЕКУЩИЙ ЗАКАЗ';
     statusPill.innerHTML = '<i></i> В РАБОТЕ';
     orderType.textContent = studioMode ? 'ЗАГРУЗКА ПОСТОВ · СЕГОДНЯ' : 'КОМПЛЕКСНАЯ ЗАЩИТА';
-    orderTitle.innerHTML = studioMode ? 'BMW M5 G90 · Оклейка PPF<br>Mercedes GLE · Полировка' : 'Подготовка кузова<br>и оклейка PPF';
+    orderTitle.innerHTML = studioMode ? 'BMW M5 G90 · Защитная плёнка<br>Mercedes GLE · Полировка' : 'Подготовка кузова<br>и защитная плёнка';
     orderId.innerHTML = studioMode ? 'ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ <span>·</span> 12:42' : 'ЗАКАЗ F-2481 <span>·</span> ПРИЁМКА 08 ОКТ, 10:30';
     progressValue.innerHTML = studioMode ? '04<small> / 06</small>' : '68<small>%</small>';
     progressTrack.style.width = studioMode ? '66%' : '68%';
