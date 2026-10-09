@@ -642,6 +642,7 @@ section h2 .accent { color: var(--accent); }
 
 /* ============ TECH ============ */
 .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+.tech-intro { max-width: 640px; margin: -14px 0 26px; color: var(--text-muted); font-size: 13px; line-height: 1.7; }
 
 .tech-item {
     background: var(--bg-card);
