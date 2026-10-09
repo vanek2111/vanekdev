@@ -47,7 +47,7 @@
     currentAuthMode=next;
     document.querySelectorAll('.auth-tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.authMode===next));
     document.querySelectorAll('.register-only').forEach(field=>field.hidden=next!=='register');
-    document.querySelector('#auth-submit').innerHTML=next==='login'?'Войти <span>↗</span>':'Создать аккаунт <span>↗</span>';
+    document.querySelector('#auth-submit').innerHTML=next==='login'?'Войти <span>↗&#xfe0e;</span>':'Создать аккаунт <span>↗&#xfe0e;</span>';
     document.querySelector('#auth-hint').textContent=next==='login'?'Войдите, чтобы увидеть данные своего автомобиля.':'Пароль должен содержать не менее 10 символов.';
     document.querySelector('#auth-password').autocomplete=next==='login'?'current-password':'new-password';
     document.querySelector('#auth-name').required=next==='register';
