@@ -172,3 +172,21 @@ body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opa
 @media(max-width:900px){.materials-grid{grid-template-columns:1fr}.material-card{min-height:0;padding:22px}.material-card+.material-card{border-top:1px solid #303133;border-left:0}.material-card h3{margin-top:28px}.material-card p{max-width:600px}}
 @media(max-width:760px){.materials-section{padding:76px 20px}.materials-head{align-items:flex-start;flex-direction:column;gap:17px;margin-bottom:27px}.materials-head>p{max-width:500px;margin:0}.materials-head h2{font-size:clamp(49px,12vw,70px);line-height:.94}.materials-grid{grid-template-columns:1fr}.material-card{padding:20px}.material-card-top{font-size:8px}.material-card h3{font-size:31px}}
 @media(prefers-reduced-motion:reduce){.material-card>a,.material-card>a span{transition:none}}
+
+/* Clearer service details, process steps and a quicker consultation form */
+.services-note{max-width:1100px;margin:18px auto 0;color:#858681;font-size:10px;line-height:1.7}
+.service-desc{max-width:440px;line-height:1.65}
+.material-card p{max-width:370px}
+.workflow-track article p{max-width:260px;line-height:1.75}
+.booking-form select,.booking-form input,.booking-form textarea{width:100%;min-width:0;border:1px solid #414244;border-radius:0;background:#202123;color:#f0eee9}
+.booking-form select{min-height:48px;padding:0 13px;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#b7a27e 50%),linear-gradient(135deg,#b7a27e 50%,transparent 50%);background-position:calc(100% - 17px) 20px,calc(100% - 12px) 20px;background-size:5px 5px;background-repeat:no-repeat}
+.booking-form select:invalid,.booking-form select option[value=""]{color:#92928d}
+.booking-form label{display:block;margin:16px 0 7px;color:#b4b3ae;font-size:10px}
+.booking-form .optional-label{margin-left:7px;color:#777873;font-size:9px;font-weight:400}
+.booking-form input{height:48px;padding:0 13px}
+.booking-form textarea{min-height:82px;padding:12px 13px;resize:vertical}
+.booking-form input::placeholder,.booking-form textarea::placeholder{color:#777873}
+.booking-form .form-head{margin-bottom:20px}
+.booking-form .button{margin-top:20px}
+.booking-form small{display:block;max-width:390px;line-height:1.7}
+@media(max-width:760px){.service-desc{max-width:none}.services-note{margin-top:14px}.booking-form label{margin-top:14px}.booking-form .button{width:100%}}
