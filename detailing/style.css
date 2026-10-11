@@ -190,3 +190,14 @@ body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opa
 .booking-form .button{margin-top:20px}
 .booking-form small{display:block;max-width:390px;line-height:1.7}
 @media(max-width:760px){.service-desc{max-width:none}.services-note{margin-top:14px}.booking-form label{margin-top:14px}.booking-form .button{width:100%}}
+
+/* Keep material card titles and external-link marks tidy on phones */
+.material-card>a .arrow-icon{width:16px;height:16px;flex:none;color:var(--gold2);transition:transform .2s ease}
+.material-card>a:hover .arrow-icon{transform:translate(2px,-2px)}
+@media(max-width:760px){
+  .material-card h3{max-width:100%;font-size:clamp(25px,6.6vw,30px);line-height:1.02;letter-spacing:-.015em;overflow-wrap:normal;word-break:normal}
+  .material-card-top{gap:8px;letter-spacing:.055em}
+  .material-card-top span:first-child{min-width:0}
+  .material-card>a{gap:12px}
+}
+@media(prefers-reduced-motion:reduce){.material-card>a .arrow-icon{transition:none}}
