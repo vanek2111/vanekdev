@@ -117,8 +117,8 @@ body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opa
 .service-desc{max-width:330px}
 .proof-strip{grid-template-columns:repeat(3,minmax(0,1fr)) .8fr}
 .proof-strip>div:not(.strip-mark){min-height:42px;padding-right:12px}
-.comparison-frame{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.93;background:#111213;--split:50%}
-.comparison-image{position:absolute;inset:0;background-image:url('assets/polish-comparison.webp');background-repeat:no-repeat;background-size:200% 100%}
+.comparison-frame{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.6;background:#111213;--split:50%}
+.comparison-image{position:absolute;inset:0;background-image:url('assets/polish-comparison-wide.jpg');background-repeat:no-repeat;background-size:200% 100%}
 .comparison-after{background-position:right center}
 .comparison-before{background-position:left center;clip-path:inset(0 calc(100% - var(--split)) 0 0)}
 .comparison-label{position:absolute;z-index:2;top:16px;padding:5px 8px;background:rgba(16,17,18,.78);color:#f0eee9;font:9px var(--mono);letter-spacing:.1em;pointer-events:none}
@@ -142,7 +142,7 @@ body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opa
   .proof-strip>div:not(.strip-mark){border-right:0;min-height:0;padding:0}
   .strip-mark{display:none}
   .service-desc{max-width:none}
-  .comparison-frame{aspect-ratio:1.42}
+  .comparison-frame{aspect-ratio:1.25}.comparison-image{background-image:url('assets/polish-comparison-tight.jpg')}
   .comparison-card figcaption p{max-width:400px}
   .workflow-track h3{font-size:16px}
 }
