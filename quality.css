@@ -1,0 +1,11 @@
+/* Prioritise the work: quiet background, sharp presenter, readable evidence. */
+.ambient-video video{opacity:.045;filter:saturate(.25) brightness(.6)}
+.case-facts{margin:18px 0 0;display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #444}
+.case-facts>div{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid #333}
+.case-facts dt{font:500 11px/1.6 Inter,sans-serif;color:#b6b6b6}
+.case-facts dd{font:400 13px/1.7 Inter,sans-serif;margin:0;color:#e2e2e2}
+.hero-top,.hero-bottom{font-size:11px}.person-label{color:#ddd}
+.project-description p{color:#d0d0d0}
+@media(min-width:1100px){.js .case-facts{order:4}.js .project-footer{order:5}.js .project{padding-bottom:70px}.js .project-description h4{font-size:22px}}
+@media(max-width:1099px){.case-facts{margin:0 0 20px}.case-facts>div{grid-template-columns:90px 1fr;gap:12px}.case-facts dd{font-size:12px}.hero-top{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.ambient-video{display:none}}

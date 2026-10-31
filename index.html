@@ -1,457 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-ru="vanekdev — сайты и цифровые решения" data-en="vanekdev — websites and digital solutions">vanekdev — сайты и цифровые решения</title>
-    <meta name="description" content="Портфолио Ивана: веб-сайты, интерфейсы, интеграции и автоматизация. Личные и учебные проекты.">
-    <meta name="keywords" content="веб-разработка, сайты, интерфейсы, API-интеграции, автоматизация, n8n">
-    <meta property="og:title" content="vanekdev — сайты и цифровые решения">
-    <meta property="og:description" content="Веб-сайты, интерфейсы, интеграции и автоматизация — проекты Ивана.">
-    <link rel="alternate" hreflang="ru" href="https://vanek2111.github.io/vanekdev/?lang=ru" />
-    <link rel="alternate" hreflang="en" href="https://vanek2111.github.io/vanekdev/?lang=en" />
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=portfolio-positioning-1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="assets/favicon-burgundy.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<title>Иван / WEB & AUTOMATION</title>
+<meta name="description" content="Портфолио Ивана. Веб-разработка, интерфейсы и автоматизация на n8n. FORMA, сайт психолога и ExoTech.">
+<link rel="stylesheet" href="style.css?v=editorial-1"><script src="i18n.js?v=quality-1" defer></script><script src="script.js?v=quality-1" defer></script>
+<link rel="stylesheet" href="burgundy.css?v=red-2">
+<link rel="stylesheet" href="quality.css?v=1">
 </head>
 <body>
-
-    <div class="progress-bar" id="progressBar"></div>
-
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <span class="logo-prefix">~/</span>vanekdev<span class="logo-cursor"></span>
-            </a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#about" data-ru="обо мне" data-en="about">обо мне</a></li>
-                    <li><a href="#learning" data-ru="учу" data-en="learning">учу</a></li>
-                    <li><a href="#process" data-ru="процесс" data-en="process">процесс</a></li>
-                    <li><a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a></li>
-                    <li><a href="#services" data-ru="услуги" data-en="services">услуги</a></li>
-                    <li><a href="#reviews" data-ru="отзывы" data-en="reviews">отзывы</a></li>
-                    <li><a href="#contacts" data-ru="контакты" data-en="contacts">контакты</a></li>
-                </ul>
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="ru">
-                        <span class="flag"><svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039a6"/><rect y="8" width="16" height="4" fill="#d52b1e"/></svg></span> RU
-                    </button>
-                    <button class="lang-btn" data-lang="en">
-                        <span class="flag"><svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="12" fill="#012169"/><path d="M0 0 L16 12 M16 0 L0 12" stroke="#fff" stroke-width="2.4"/><path d="M0 0 L16 12 M16 0 L0 12" stroke="#C8102E" stroke-width="1.2"/><path d="M8 0 V12 M0 6 H16" stroke="#fff" stroke-width="4"/><path d="M8 0 V12 M0 6 H16" stroke="#C8102E" stroke-width="2.4"/></svg></span> EN
-                    </button>
-                </div>
-                <button class="burger" id="burger" aria-label="Меню">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <a href="#" class="logo"><span class="logo-prefix">~/</span>vanekdev</a>
-            <div class="mobile-menu-header-right">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="ru">
-                        <span class="flag"><svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039a6"/><rect y="8" width="16" height="4" fill="#d52b1e"/></svg></span> RU
-                    </button>
-                    <button class="lang-btn" data-lang="en">
-                        <span class="flag"><svg viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="12" fill="#012169"/><path d="M0 0 L16 12 M16 0 L0 12" stroke="#fff" stroke-width="2.4"/><path d="M0 0 L16 12 M16 0 L0 12" stroke="#C8102E" stroke-width="1.2"/><path d="M8 0 V12 M0 6 H16" stroke="#fff" stroke-width="4"/><path d="M8 0 V12 M0 6 H16" stroke="#C8102E" stroke-width="2.4"/></svg></span> EN
-                    </button>
-                </div>
-                <button class="mobile-menu-close" id="mobileMenuClose">×</button>
-            </div>
-        </div>
-        <nav class="mobile-menu-nav">
-            <a href="#about" data-ru="обо мне" data-en="about">обо мне</a>
-            <a href="#learning" data-ru="сейчас учусь" data-en="learning now">сейчас учусь</a>
-            <a href="#process" data-ru="процесс" data-en="process">процесс</a>
-            <a href="#portfolio" data-ru="работы" data-en="portfolio">работы</a>
-            <a href="#services" data-ru="услуги" data-en="services">услуги</a>
-            <a href="#reviews" data-ru="отзывы" data-en="reviews">отзывы</a>
-            <a href="#contacts" data-ru="контакты" data-en="contacts">контакты</a>
-        </nav>
-        <div class="mobile-menu-footer">
-            <a href="#contacts" class="btn" data-ru="Связаться" data-en="Contact me">Связаться</a>
-        </div>
-    </div>
-
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <button class="back-to-top" id="backToTop" aria-label="Наверх">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
-        </svg>
-    </button>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-meta">
-                    <div class="hero-byline">
-                        <span class="hero-monogram" aria-hidden="true">И</span>
-                        <span class="hero-byline-copy"><strong>Иван</strong><span data-ru="Личные и учебные проекты" data-en="Personal and learning projects">Личные и учебные проекты</span></span>
-                    </div>
-                    <span class="hero-tag" data-ru="Доступен для проектов" data-en="Available for projects">Доступен для проектов</span>
-                </div>
-                <h1><span data-ru="Сайты и цифровые" data-en="Websites and digital">Сайты и цифровые</span><br><span class="accent" data-ru="решения" data-en="solutions">решения</span></h1>
-                <p data-ru="Делаю сайты — от лендингов до каталогов и личных кабинетов — и связываю их с внешними сервисами. В портфолио — сайт психолога, учебный магазин и концепты веб-платформ. Сейчас развиваюсь в веб-разработке и автоматизации." data-en="I build websites, from landing pages to catalogs and client accounts, and connect them with external services. My portfolio includes a psychologist's website, a practice store and web platform concepts. I am continuing to grow in web development and automation.">Делаю сайты — от лендингов до каталогов и личных кабинетов — и связываю их с внешними сервисами. В портфолио — сайт психолога, учебный магазин и концепты веб-платформ. Сейчас развиваюсь в веб-разработке и автоматизации.</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn" data-ru="Посмотреть работы" data-en="View portfolio">Посмотреть работы</a>
-                    <a href="#contacts" class="btn btn-outline" data-ru="Написать мне" data-en="Contact me">Написать мне</a>
-                </div>
-                <div class="hero-stats">
-                    <div><div class="hero-stat-value">4</div><div class="hero-stat-label" data-ru="Опубликованных проекта" data-en="Published projects">Опубликованных проекта</div></div>
-                    <div><div class="hero-stat-value">API</div><div class="hero-stat-label" data-ru="Интеграции и автоматизация" data-en="Integrations and automation">Интеграции и автоматизация</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="terminal reveal">
-            <span class="terminal-line"><span class="prompt">$</span><span class="cmd">whoami</span></span>
-            <span class="terminal-line"><span class="out" data-ru="→ Разработчик автоматизаций и веб-сайтов" data-en="→ Automation & Web Developer">→ Разработчик автоматизаций и веб-сайтов</span></span>
-            <span class="terminal-line"><span class="prompt">$</span><span class="cmd">cat skills.txt</span></span>
-            <span class="terminal-line"><span class="out">→ Web interfaces • API integrations • data • automation</span></span>
-            <span class="terminal-line"><span class="prompt">$</span><span class="cmd">ls ./services</span></span>
-            <span class="terminal-line"><span class="out">→ websites/ interfaces/ integrations/ workflows/</span></span>
-            <span class="terminal-line"><span class="prompt">$</span><span class="cmd">status</span></span>
-            <span class="terminal-line"><span class="out" data-ru="→ ● Свободен для новых проектов" data-en="→ ● Available for new projects">→ <span style="color: var(--accent);">●</span> Свободен для новых проектов</span></span>
-        </div>
-    </div>
-
-    <section id="about" class="reveal">
-        <div class="container">
-            <span class="section-tag">01 / about</span>
-            <h2><span data-ru="Обо" data-en="About">Обо</span> <span class="accent" data-ru="мне" data-en="me">мне</span></h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-avatar">И</div>
-                    <h3 data-ru="Иван" data-en="Ivan">Иван</h3>
-                    <div class="role">// web & automation</div>
-                    <div class="info-item"><span class="key" data-ru="практика:" data-en="practice:">практика:</span><span data-ru="Личные и учебные проекты" data-en="Personal and practice projects">Личные и учебные проекты</span></div>
-                    <div class="info-item"><span class="key" data-ru="фокус:" data-en="focus:">фокус:</span><span data-ru="Веб, интеграции, автоматизация" data-en="Web, integrations, automation">Веб, интеграции, автоматизация</span></div>
-                    <div class="info-item"><span class="key" data-ru="языки:" data-en="langs:">языки:</span><span data-ru="Русский, English" data-en="Russian, English">Русский, English</span></div>
-                    <div class="info-item"><span class="key" data-ru="формат:" data-en="format:">формат:</span><span data-ru="Удалённо, по всему миру" data-en="Remote, worldwide">Удалённо, по всему миру</span></div>
-                </div>
-                <div class="about-text">
-                    <p data-ru="Привет! Я Иван. Изучаю веб-разработку и автоматизацию на n8n на личных и учебных проектах." data-en="Hi, I'm Ivan. I'm learning web development and n8n automation through personal and practice projects.">Привет! Я Иван. Изучаю веб-разработку и автоматизацию на n8n на личных и учебных проектах.</p>
-                    <p data-ru="Работаю с HTML, CSS, JavaScript, формами, API и данными. В проектах подбираю инструменты под задачу: например, для сайта психолога настроил передачу заявок через n8n в Telegram, а в ExoTech подключил Supabase для аккаунтов и заказов." data-en="I work with HTML, CSS, JavaScript, forms, APIs and data. I choose tools to fit each project: for example, the psychologist's website routes requests through n8n to Telegram, while ExoTech uses Supabase for accounts and orders.">Работаю с HTML, CSS, JavaScript, формами, API и данными. В проектах подбираю инструменты под задачу: например, для сайта психолога настроил передачу заявок через n8n в Telegram, а в ExoTech подключил Supabase для аккаунтов и заказов.</p>
-                    <p data-ru="Сначала обсуждаем задачу и её объём. Затем я предлагаю подход и согласую сроки до начала работы." data-en="First, we discuss the task and its scope. Then I suggest an approach and agree on a timeline before starting.">Сначала обсуждаем задачу и её объём. Затем я предлагаю подход и согласую сроки до начала работы.</p>
-                    <div class="skills-grid">
-                        <div class="skill-item">n8n</div>
-                        <div class="skill-item">OpenAI / Claude</div>
-                        <div class="skill-item">HTML / CSS / JS</div>
-                        <div class="skill-item">Telegram Bot API</div>
-                        <div class="skill-item">Airtable</div>
-                        <div class="skill-item">Supabase</div>
-                        <div class="skill-item">Webhook / API</div>
-                        <div class="skill-item">GitHub Pages</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reveal" id="learning">
-        <div class="container">
-            <span class="section-tag" data-ru="сейчас / учусь" data-en="now / learning">сейчас / учусь</span>
-            <h2><span data-ru="Сейчас" data-en="Currently">Сейчас</span> <span class="accent" data-ru="изучаю" data-en="learning">изучаю</span></h2>
-            <div class="learning-grid">
-                <article class="learning-card"><span class="learning-index">01 — FRONTEND</span><h3 data-ru="Веб-разработка" data-en="Web development">Веб-разработка</h3><p data-ru="Закрепляю HTML, CSS и JavaScript на собственных страницах и интерфейсах." data-en="Practicing HTML, CSS and JavaScript by building my own pages and interfaces.">Закрепляю HTML, CSS и JavaScript на собственных страницах и интерфейсах.</p></article>
-                <article class="learning-card"><span class="learning-index">02 — WORKFLOWS</span><h3 data-ru="Интеграции и автоматизация" data-en="Integrations and automation">Интеграции и автоматизация</h3><p data-ru="Связываю формы, API и внешние сервисы в рабочие сценарии. В текущих проектах для этого использую n8n." data-en="Connecting forms, APIs and external services into practical workflows. I currently use n8n for this in my projects.">Связываю формы, API и внешние сервисы в рабочие сценарии. В текущих проектах для этого использую n8n.</p></article>
-                <article class="learning-card"><span class="learning-index">03 — DATA</span><h3 data-ru="Данные и кабинеты" data-en="Data and accounts">Данные и кабинеты</h3><p data-ru="Практикую авторизацию, профили и сохранение данных на Supabase в ExoTech и FORMA." data-en="Practicing authentication, profiles and data storage with Supabase in ExoTech and FORMA.">Практикую авторизацию, профили и сохранение данных на Supabase в ExoTech и FORMA.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="reveal">
-        <div class="container">
-            <span class="section-tag">02 / process</span>
-            <h2><span data-ru="Как я" data-en="How I">Как я</span> <span class="accent" data-ru="работаю" data-en="work">работаю</span></h2>
-            <div class="process-grid">
-                <div class="process-step"><div class="process-number">01</div><h3 data-ru="Заявка" data-en="Request">Заявка</h3><p data-ru="Ты пишешь в Telegram или на email. Рассказываешь, какая задача." data-en="You write to Telegram or email. Tell me about your task.">Ты пишешь в Telegram или на email. Рассказываешь, какая задача.</p></div>
-                <div class="process-step"><div class="process-number">02</div><h3 data-ru="Обсуждение" data-en="Discussion">Обсуждение</h3><p data-ru="Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки." data-en="We call or chat. I clarify details, offer a solution and timeline.">Созваниваемся или переписываемся. Уточняю детали, предлагаю решение и сроки.</p></div>
-                <div class="process-step"><div class="process-number">03</div><h3 data-ru="Прототип" data-en="Prototype">Прототип</h3><p data-ru="Показываю черновик. Вносим правки." data-en="I show a draft. We make edits.">Показываю черновик. Вносим правки.</p></div>
-                <div class="process-step"><div class="process-number">04</div><h3 data-ru="Реализация" data-en="Implementation">Реализация</h3><p data-ru="Делаю проект. Держу в курсе на каждом этапе." data-en="I build the project. Keep you updated at every stage.">Делаю проект. Держу в курсе на каждом этапе.</p></div>
-                <div class="process-step"><div class="process-number">05</div><h3 data-ru="Сдача" data-en="Delivery">Сдача</h3><p data-ru="Передаю готовый проект и объясняю, как им пользоваться." data-en="I hand over the finished project and explain how to use it.">Передаю готовый проект и объясняю, как им пользоваться.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="reveal">
-        <div class="container">
-            <span class="section-tag">03 / portfolio</span>
-            <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="работы" data-en="works">работы</span></h2>
-            <div class="portfolio-grid">
-                <div class="project-card project-card-forma" id="case-forma">
-                    <div class="project-image">
-                        <img src="detailing/assets/bmw-m5-g90.jpg" alt="BMW M5 в детейлинг-студии FORMA" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags"><span class="project-tag" data-ru="концепт сайта" data-en="website concept">концепт сайта</span><span class="project-tag">Supabase</span><span class="project-tag" data-ru="личный кабинет" data-en="client portal">личный кабинет</span></div>
-                        <h3 data-ru="FORMA — сайт детейлинг-студии" data-en="FORMA — detailing studio website">FORMA — сайт детейлинг-студии</h3>
-                        <p class="project-desc" data-ru="Премиальный сайт студии с онлайн-записью и личным кабинетом: автомобиль клиента, заявки и история обслуживания." data-en="A premium studio website with online booking and a client portal for vehicles, requests and service history.">Премиальный сайт студии с онлайн-записью и личным кабинетом: автомобиль клиента, заявки и история обслуживания.</p>
-                        <div class="project-details">
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Собрал адаптивный сайт, настроил регистрацию и кабинет клиента с профилями автомобилей и заявками." data-en="Built the responsive site and set up sign-up and a client portal with vehicle profiles and service requests.">Собрал адаптивный сайт, настроил регистрацию и кабинет клиента с профилями автомобилей и заявками.</span></div>
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Технологии" data-en="Technology">Технологии</span><span data-ru="Supabase Auth и база данных; доступ к данным клиента ограничен его аккаунтом." data-en="Supabase Auth and database, with customer data restricted to each account.">Supabase Auth и база данных; доступ к данным клиента ограничен его аккаунтом.</span></div>
-                        </div>
-                        <a href="https://vanek2111.github.io/vanekdev/detailing/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Открыть сайт FORMA" data-en="Open FORMA website">Открыть сайт FORMA</a>
-                    </div>
-                </div>
-                <div class="project-card" id="case-psy">
-                    <div class="project-image">
-                        <img src="assets/sitepsy-desktop.jpg" alt="Превью сайта психолога «Тихое место»" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags"><span class="project-tag" data-ru="сайт" data-en="website">сайт</span><span class="project-tag">n8n</span><span class="project-tag" data-ru="форма заявок" data-en="request form">форма заявок</span><span class="project-tag">Telegram</span></div>
-                        <h3 data-ru="Сайт психолога и приём заявок" data-en="Psychologist website and request flow">Сайт психолога и приём заявок</h3>
-                        <p class="project-desc" data-ru="Сайт для психолога Елизаветы Золотовой с формой записи и автоматической передачей заявок в Telegram." data-en="A website for psychologist Elizaveta Zolotova, with a request form and automatic delivery of submissions to Telegram.">Сайт для психолога Елизаветы Золотовой с формой записи и автоматической передачей заявок в Telegram.</p>
-                        <div class="project-details">
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Собрал сайт с AI-инструментами, настроил форму и связал её с Telegram через n8n." data-en="Built the site with AI tools, set up the form and connected it to Telegram through n8n.">Собрал сайт с AI-инструментами, настроил форму и связал её с Telegram через n8n.</span></div>
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Результат" data-en="Outcome">Результат</span><span data-ru="Заявки с сайта автоматически приходят Елизавете в Telegram." data-en="Website requests are delivered to Elizaveta in Telegram.">Заявки с сайта автоматически приходят Елизавете в Telegram.</span></div>
-                        </div>
-                        <a href="#psy-story" class="case-read-link" data-ru="Как устроен проект ↓" data-en="How the project works ↓">Как устроен проект ↓</a>
-                        <a href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Посмотреть проект" data-en="View project">Посмотреть проект</a>
-                    </div>
-                </div>
-                <div class="project-card" id="case-shop">
-                    <div class="project-image">
-                        <img src="assets/exotech-desktop.jpg" alt="Превью учебного интернет-магазина ExoTech" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags"><span class="project-tag" data-ru="учебный проект" data-en="practice project">учебный проект</span><span class="project-tag">HTML/CSS/JS</span><span class="project-tag">Supabase</span></div>
-                        <h3 data-ru="Интернет-магазин ExoTech" data-en="ExoTech online store">Интернет-магазин ExoTech</h3>
-                        <p class="project-desc" data-ru="Личный учебный проект — интернет-магазин игровой периферии с каталогом и оформлением заказа." data-en="A personal practice project: an online store for gaming peripherals with a catalog and order flow.">Личный учебный проект — интернет-магазин игровой периферии с каталогом и оформлением заказа.</p>
-                        <div class="project-details">
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Сделал каталог с фильтрами, страницы товаров, корзину, регистрацию и личный кабинет." data-en="Built a filterable catalog, product pages, cart, sign-up and an account area.">Сделал каталог с фильтрами, страницы товаров, корзину, регистрацию и личный кабинет.</span></div>
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Данные" data-en="Data">Данные</span><span data-ru="Подключил Supabase для аккаунтов и сохранения заказов. Оплаты на сайте нет." data-en="Connected Supabase for accounts and order storage. The demo does not take payments.">Подключил Supabase для аккаунтов и сохранения заказов. Оплаты на сайте нет.</span></div>
-                        </div>
-                        <a href="https://vanek2111.github.io/vanek-shop/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Открыть демо магазина" data-en="Open store demo">Открыть демо магазина</a>
-                    </div>
-                </div>
-                <div class="project-card" id="case-arena">
-                    <div class="project-image">
-                        <img src="portfolio-arena.png" alt="Превью кибер-клуба NEXUS ARENA" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags"><span class="project-tag" data-ru="дизайн-концепт" data-en="design concept">дизайн-концепт</span><span class="project-tag">HTML/CSS</span><span class="project-tag">responsive</span></div>
-                        <h3 data-ru="Кибер-клуб NEXUS ARENA" data-en="NEXUS ARENA cyber club">Кибер-клуб NEXUS ARENA</h3>
-                        <p class="project-desc" data-ru="Учебный лендинг кибер-клуба: выразительная главная страница, тарифы, игровые зоны и форма бронирования. Цены и сведения клуба — демонстрационные." data-en="A cyber club landing page concept with a distinctive home page, pricing, gaming zones and a booking form. Club details and prices are demonstration data.">Учебный лендинг кибер-клуба: выразительная главная страница, тарифы, игровые зоны и форма бронирования. Цены и сведения клуба — демонстрационные.</p>
-                        <div class="project-details">
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Моя часть" data-en="My part">Моя часть</span><span data-ru="Переработал визуальный стиль: типографика, композиция, адаптивная версия и фотоконцепт." data-en="Redesigned the visual style: typography, composition, responsive layout and photo concept.">Переработал визуальный стиль: типографика, композиция, адаптивная версия и фотоконцепт.</span></div>
-                            <div class="project-detail"><span class="project-detail-label" data-ru="Результат" data-en="Outcome">Результат</span><span data-ru="Дизайн-концепт с адаптивной версткой и формой бронирования. Данные для клуба показаны как пример." data-en="A responsive design concept with a booking form. Club details are shown as examples.">Дизайн-концепт с адаптивной версткой и формой бронирования. Данные для клуба показаны как пример.</span></div>
-                        </div>
-                        <a href="https://vanek2111.github.io/nexus-arena/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Открыть NEXUS ARENA" data-en="Open NEXUS ARENA">Открыть NEXUS ARENA</a>
-                    </div>
-                </div>
-            </div>
-            <article class="case-study" id="psy-story">
-                <div class="case-study-heading">
-                    <span class="section-tag" data-ru="кейс / тихое место" data-en="case / quiet place">кейс / тихое место</span>
-                    <h3 data-ru="От первого визита до заявки психологу" data-en="From a first visit to a consultation request">От первого визита до заявки психологу</h3>
-                    <p data-ru="Сайт для Елизаветы Золотовой: знакомство со специалистом, выбор консультации и связь через удобный канал." data-en="A website for Elizaveta Zolotova: meet the psychologist, choose a consultation and leave a preferred contact.">Сайт для Елизаветы Золотовой: знакомство со специалистом, выбор консультации и связь через удобный канал.</p>
-                </div>
-                <div class="case-story-grid">
-                    <div><span class="case-label" data-ru="01 / Задача" data-en="01 / Task">01 / Задача</span><p data-ru="Собрать услуги, цены и запись в одном месте. Передавать заявки Елизавете в Telegram, чтобы ей не приходилось искать их в разных каналах." data-en="Bring services, prices and booking together. Deliver website requests to Elizaveta in Telegram, where she can follow up.">Собрать услуги, цены и запись в одном месте. Передавать заявки Елизавете в Telegram, чтобы ей не приходилось искать их в разных каналах.</p></div>
-                    <div><span class="case-label" data-ru="02 / Моя работа" data-en="02 / My work">02 / Моя работа</span><p data-ru="Собрал и доработал сайт с AI-инструментами. Настроил n8n, связал форму с Telegram и добавил выбор способа связи: телефон, Telegram или MAX." data-en="Built and refined the website with AI tools. Configured n8n, connected the form to Telegram and added phone, Telegram or MAX as contact options.">Собрал и доработал сайт с AI-инструментами. Настроил n8n, связал форму с Telegram и добавил выбор способа связи: телефон, Telegram или MAX.</p></div>
-                    <div><span class="case-label" data-ru="03 / Результат" data-en="03 / Outcome">03 / Результат</span><p data-ru="Сайт опубликован, заявки поступают в Telegram. Елизавета получает имя, контакт и запрос и может договориться с человеком о консультации." data-en="The website is live and requests arrive in Telegram. Elizaveta receives a name, contact and message, and can arrange a consultation.">Сайт опубликован, заявки поступают в Telegram. Елизавета получает имя, контакт и запрос и может договориться с человеком о консультации.</p></div>
-                </div>
-                <ol class="case-flow">
-                    <li><span class="flow-number">01</span><strong data-ru="Форма на сайте" data-en="Website form">Форма на сайте</strong><span data-ru="Имя, контакт и запрос" data-en="Name, contact and message">Имя, контакт и запрос</span></li>
-                    <li><span class="flow-number">02</span><strong>n8n</strong><span data-ru="Принимает заявку и отправляет уведомление" data-en="Receives the request and sends a notification">Принимает заявку и отправляет уведомление</span></li>
-                    <li><span class="flow-number">03</span><strong>Telegram</strong><span data-ru="Елизавета получает сообщение" data-en="Elizaveta receives the message">Елизавета получает сообщение</span></li>
-                </ol>
-                <div class="case-outcome"><span class="case-label" data-ru="Что продумано" data-en="Details that matter">Что продумано</span><p data-ru="Крупные поля на телефоне, согласие перед отправкой и понятный статус заявки. При ошибке сервера введённый текст остаётся в форме." data-en="Large fields on mobile, consent before submitting and a clear request status. If the server returns an error, the entered text stays in the form.">Крупные поля на телефоне, согласие перед отправкой и понятный статус заявки. При ошибке сервера введённый текст остаётся в форме.</p></div>
-                <a href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer" class="project-link" data-ru="Открыть сайт психолога" data-en="Open the psychologist website">Открыть сайт психолога</a>
-            </article>
-        </div>
-    </section>
-
-    <section id="services" class="reveal">
-        <div class="container">
-            <span class="section-tag">04 / services</span>
-            <h2><span data-ru="Мои" data-en="My">Мои</span> <span class="accent" data-ru="направления" data-en="focus areas">направления</span></h2>
-            <div class="services-grid">
-                <div class="service-card"><span class="service-number">// 01</span><h3 data-ru="Сайты и лендинги" data-en="Websites and landing pages">Сайты и лендинги</h3><p data-ru="Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу." data-en="I build responsive websites with AI tools and adapt them to a specific task.">Собираю адаптивные сайты с помощью AI-инструментов и настраиваю их под конкретную задачу.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div><a class="service-case-link" href="#case-psy" data-ru="Смотреть кейс" data-en="See case">Смотреть кейс</a></div>
-                <div class="service-card"><span class="service-number">// 02</span><h3 data-ru="Интеграции и автоматизация" data-en="Integrations and automation">Интеграции и автоматизация</h3><p data-ru="Соединяю сайт с внешними сервисами через API и вебхуки, настраиваю обмен данными и автоматические сценарии. В кейсе психолога использовал n8n и Telegram." data-en="I connect websites with external services through APIs and webhooks, setting up data flows and automated workflows. The psychologist project uses n8n and Telegram.">Соединяю сайт с внешними сервисами через API и вебхуки, настраиваю обмен данными и автоматические сценарии. В кейсе психолога использовал n8n и Telegram.</p><div class="service-price" data-ru="Стоимость — после обсуждения задачи" data-en="Price discussed after we define the task">Стоимость — после обсуждения задачи</div><a class="service-case-link" href="#case-psy" data-ru="Смотреть пример" data-en="See example">Смотреть пример</a></div>
-                <div class="service-card"><span class="service-number">// 03</span><h3 data-ru="Интерфейсы с данными" data-en="Data-driven interfaces">Интерфейсы с данными</h3><p data-ru="Прорабатываю каталоги, фильтрацию, корзины и личные кабинеты. Для аккаунтов и заказов в ExoTech подключил Supabase — это один из примеров backend-части проекта." data-en="I build out catalogs, filters, carts and client accounts. ExoTech uses Supabase for accounts and orders as one example of a project's backend.">Прорабатываю каталоги, фильтрацию, корзины и личные кабинеты. Для аккаунтов и заказов в ExoTech подключил Supabase — это один из примеров backend-части проекта.</p><div class="service-price" data-ru="Объём и стоимость обсуждаем отдельно" data-en="Scope and price discussed individually">Объём и стоимость обсуждаем отдельно</div><a class="service-case-link" href="#case-shop" data-ru="Смотреть ExoTech" data-en="See ExoTech">Смотреть ExoTech</a></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reveal">
-        <div class="container">
-            <span class="section-tag">05 / stack</span>
-            <h2><span data-ru="Технологии" data-en="Technology">Технологии</span> <span class="accent" data-ru="в проектах" data-en="in practice">в проектах</span></h2>
-            <p class="tech-intro" data-ru="Рабочий набор подбираю под задачу. Ниже — инструменты, которые уже применял в этих проектах." data-en="I choose the toolset to fit the task. Below are tools I've already used in these projects.">Рабочий набор подбираю под задачу. Ниже — инструменты, которые уже применял в этих проектах.</p>
-            <div class="tech-grid">
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>n8n</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>OpenAI</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Claude</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>Telegram</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>Airtable</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>Supabase</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>HTML/CSS/JS</div>
-                <div class="tech-item"><svg class="tech-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>GitHub</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="reveal">
-        <div class="container">
-            <span class="section-tag">06 / reviews</span>
-            <h2><span data-ru="Отзыв" data-en="Client">Отзыв</span> <span class="accent" data-ru="о проекте" data-en="review">о проекте</span></h2>
-            <div class="reviews-grid">
-                <div class="review-card"><div class="review-text" data-ru="Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется!" data-en="Ivan made me a website and Telegram bot in 5 days. Now all requests automatically go to Telegram, nothing gets lost!">Иван сделал мне сайт и Telegram-бота за 5 дней. Теперь все заявки автоматически приходят в Telegram, ничего не теряется!</div><div class="review-author">— <span data-ru="Елизавета" data-en="Elizaveta">Елизавета</span></div><div class="review-role" data-ru="Психолог, частная практика" data-en="Psychologist, private practice">Психолог, частная практика</div></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reveal">
-        <div class="container">
-            <span class="section-tag">07 / faq</span>
-            <h2><span data-ru="Частые" data-en="Frequent">Частые</span> <span class="accent" data-ru="вопросы" data-en="questions">вопросы</span></h2>
-            <div class="faq-list">
-                <div class="faq-item"><div class="faq-question"><span data-ru="Сколько стоит проект?" data-en="How much does a project cost?">Сколько стоит проект?</span><div class="faq-toggle">+</div></div><div class="faq-answer" data-ru="Стоимость зависит от задачи и объёма. Сначала обсудим, что нужно сделать, затем я назову цену до начала работы." data-en="The price depends on the task and scope. We will discuss what needs to be done first, and I will give you a price before starting.">Стоимость зависит от задачи и объёма. Сначала обсудим, что нужно сделать, затем я назову цену до начала работы.</div></div>
-                <div class="faq-item"><div class="faq-question"><span data-ru="Сколько времени занимает разработка?" data-en="How long does development take?">Сколько времени занимает разработка?</span><div class="faq-toggle">+</div></div><div class="faq-answer" data-ru="Срок зависит от объёма и функций. После обсуждения задачи я оценю работу и предложу реалистичный план." data-en="Timing depends on the scope and features. After discussing the task, I will estimate the work and suggest a realistic plan.">Срок зависит от объёма и функций. После обсуждения задачи я оценю работу и предложу реалистичный план.</div></div>
-                <div class="faq-item"><div class="faq-question"><span data-ru="Что если понадобятся правки?" data-en="What if I need changes?">Что если понадобятся правки?</span><div class="faq-toggle">+</div></div><div class="faq-answer" data-ru="Показываю промежуточный результат, чтобы обсудить направление и необходимые изменения до завершения проекта." data-en="I show the work in progress so we can discuss the direction and necessary changes before the project is finished.">Показываю промежуточный результат, чтобы обсудить направление и необходимые изменения до завершения проекта.</div></div>
-                <div class="faq-item"><div class="faq-question"><span data-ru="Как проходит оплата?" data-en="How does payment work?">Как проходит оплата?</span><div class="faq-toggle">+</div></div><div class="faq-answer" data-ru="Порядок оплаты обсуждаем до начала работы вместе с объёмом и сроками." data-en="We agree on payment terms before work begins, along with the scope and timeline.">Порядок оплаты обсуждаем до начала работы вместе с объёмом и сроками.</div></div>
-                <div class="faq-item"><div class="faq-question"><span data-ru="Будет ли поддержка после сдачи?" data-en="Is support available after delivery?">Будет ли поддержка после сдачи?</span><div class="faq-toggle">+</div></div><div class="faq-answer" data-ru="Передаю проект и объясняю, как им пользоваться. Если позже понадобятся изменения, их объём и стоимость можно обсудить отдельно." data-en="I hand over the project and explain how to use it. If you need changes later, we can discuss their scope and cost separately.">Передаю проект и объясняю, как им пользоваться. Если позже понадобятся изменения, их объём и стоимость можно обсудить отдельно.</div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacts" class="reveal">
-        <div class="container">
-            <span class="section-tag">08 / contacts</span>
-            <h2><span data-ru="Связь" data-en="Get in">Связь</span> <span class="accent" data-ru="со мной" data-en="touch">со мной</span></h2>
-            <div class="contacts-grid">
-                <a href="https://t.me/na_svyazi_q" target="_blank" class="contact-card">
-                    <span class="contact-label">// telegram</span>
-                    <span class="contact-value">@na_svyazi_q</span>
-                    <span class="contact-hint" data-ru="Напиши и коротко опиши задачу" data-en="Message me and briefly describe your task">Напиши и коротко опиши задачу</span>
-                </a>
-                <a href="mailto:vanya11222@mail.ru" class="contact-card">
-                    <span class="contact-label">// email</span>
-                    <span class="contact-value">vanya11222@mail.ru</span>
-                    <span class="contact-hint" data-ru="Для подробных запросов и ТЗ" data-en="For detailed requests and specs">Для подробных запросов и ТЗ</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 <span class="accent">vanekdev</span> · Web &amp; Automation</p>
-            <p style="margin-top: 8px; font-size: 12px; opacity: 0.6;">Made with n8n • AI • Coffee ☕</p>
-        </div>
-    </footer>
-
-    <a href="https://t.me/na_svyazi_q" target="_blank" class="tg-float" aria-label="Написать в Telegram">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-    </a>
-
-    <script>
-        let currentLang = localStorage.getItem('lang') || 'ru';
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlLang = urlParams.get('lang');
-        if (urlLang === 'en' || urlLang === 'ru') currentLang = urlLang;
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('lang', lang);
-            document.documentElement.lang = lang;
-            const title = document.querySelector('title');
-            if (title.dataset[lang]) title.textContent = title.dataset[lang];
-            document.querySelectorAll('[data-ru][data-en]').forEach(el => {
-                const newText = el.dataset[lang];
-                if (newText) el.textContent = newText;
-            });
-            document.querySelectorAll('.project-card.placeholder').forEach(card => {
-                card.classList.toggle('en', lang === 'en');
-            });
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === lang);
-            });
-            const url = new URL(window.location);
-            if (lang === 'ru') url.searchParams.delete('lang');
-            else url.searchParams.set('lang', lang);
-            window.history.replaceState({}, '', url);
-        }
-
-        function switchLang(lang) {
-            if (lang === currentLang) return;
-            document.body.classList.add('lang-fade', 'fading');
-            setTimeout(() => {
-                setLanguage(lang);
-                document.body.classList.remove('fading');
-                setTimeout(() => document.body.classList.remove('lang-fade'), 300);
-            }, 250);
-        }
-
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => switchLang(btn.dataset.lang));
-        });
-        setLanguage(currentLang);
-
-        const burger = document.getElementById('burger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const menuOverlay = document.getElementById('menuOverlay');
-
-        function openMenu() {
-            mobileMenu.classList.add('open');
-            menuOverlay.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMenu() {
-            mobileMenu.classList.remove('open');
-            menuOverlay.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-
-        burger.addEventListener('click', openMenu);
-        mobileMenuClose.addEventListener('click', closeMenu);
-        menuOverlay.addEventListener('click', closeMenu);
-        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-
-        const progressBar = document.getElementById('progressBar');
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
-        });
-
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 400);
-        });
-        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                const wasActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                if (!wasActive) item.classList.add('active');
-            });
-        });
-    </script>
-
-</body>
-</html>
+<div class="ambient-video" aria-hidden="true"><video id="city-background" muted playsinline preload="metadata" data-src="assets/city-evening.mp4"></video></div>
+<header class="nav"><a class="brand" href="#home" aria-label="Иван, на главную">{ v }<span>ИВАН / WEB DEVELOPER</span></a><nav aria-label="Основная навигация"><a href="#projects">Проекты <sup>03</sup></a><a href="#about">Обо мне</a><a href="#contact">Контакт ↗</a></nav><div class="language-switch" role="group" aria-label="Language / Язык"><button type="button" data-language="ru" aria-pressed="true">RU</button><span aria-hidden="true">/</span><button type="button" data-language="en" aria-pressed="false">EN</button></div></header>
+<main><div class="scroll-canvas"><div class="canvas-screen"><div class="canvas-person-rail" aria-hidden="true"><div class="canvas-core"><div class="selection"><span class="person-label">&lt;person /&gt;</span><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div><img src="assets/character-present-v2/frame-034.webp" alt="" width="768" height="1152"></div></div>
+<section class="hero" id="home" aria-labelledby="hero-title">
+<div class="hero-top"><span>ПОРТФОЛИО / 2026</span><span>HTML · CSS · JS · n8n</span></div>
+<div class="hero-copy"><h1 id="hero-title">WEB <span class="amp">&</span><br><span class="automation">AUTOMATION</span><span class="semicolon">;</span></h1><div class="hero-intro"><span class="bracket">{</span><p>Я Иван. Собираю сайты,<br>интерфейсы и автоматизацию.<br><span>От первого экрана до заявки в Telegram.</span></p><span class="bracket">}</span></div><a class="text-link" href="#projects">Смотреть проекты <span>↓</span></a></div>
+<div class="hero-person"><div class="selection"><span class="person-label">&lt;hero.person /&gt;</span><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div><!-- ВСТАВЬТЕ СЮДА ВАШЕ ФОТО (PNG) --><img src="assets/character-present-v2/frame-034.webp" alt="Персонаж в технической ветровке с капюшоном, очках и широких карго" width="768" height="1152" fetchpriority="high"><span class="person-note">DESIGN / CODE / AUTOMATION</span></div>
+<aside class="hero-right" aria-label="Направления работы">
+<span class="hero-right-caption">ОТ ИНТЕРФЕЙСА К ДЕЙСТВИЮ</span>
+<div class="hero-right-type"><span>САЙТЫ</span><span>СВЯЗИ</span><span>ДАННЫЕ<span class="hero-right-dot">.</span></span></div>
+<p>Сайт принимает заявку.<br>Автоматизация доставляет её.<br>Данные остаются в системе.</p>
+<a href="#projects">ПОСМОТРЕТЬ В ДЕЛЕ <span>↙</span></a>
+</aside>
+<div class="hero-bottom"><span>Личные и учебные проекты</span><a href="https://t.me/na_svyazi_q" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a><span class="hero-index">{ 01 — 03 }</span></div>
+</section>
+<section class="portfolio" id="projects" aria-labelledby="projects-title">
+<div class="project-stage">
+<div class="section-line"><h2 id="projects-title">ИЗБРАННОЕ<span> / WORK</span></h2><span class="project-counter" aria-hidden="true">01 / 03</span></div>
+<div class="stage-word" aria-hidden="true">BUILD<span> / </span>DEPLOY</div>
+<div class="stage-person" aria-hidden="true"><div class="selection"><span class="person-label">&lt;core /&gt;</span><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div><img src="assets/character-present-v2/frame-034.webp" alt="" width="768" height="1152"><span class="core-tag">{ developer: "Иван" }</span></div>
+<div class="project-panels">
+<article class="project active" data-project="0" id="forma"><div class="project-meta"><span>01 / WEBSITE</span><span>ЛИЧНЫЙ ПРОЕКТ</span></div><div class="project-title"><h3>FORMA</h3><a href="https://vanek2111.github.io/vanekdev/detailing/" target="_blank" rel="noopener noreferrer" aria-label="Открыть FORMA">↗</a></div><a class="project-visual forma-visual" href="https://vanek2111.github.io/vanekdev/detailing/" target="_blank" rel="noopener noreferrer"><img src="assets/forma-cover.webp" alt="Предметная обложка FORMA: детали автомобиля и уход за кузовом" width="1536" height="1024"></a><div class="project-description"><h4>Сайт детейлинг-студии</h4><p>Онлайн-запись и личный кабинет: автомобили клиента, заявки и история обслуживания. Настроил регистрацию и доступ к данным своего аккаунта.</p></div><dl class="case-facts"><div><dt>Задача</dt><dd>Запись на услуги и данные автомобиля.</dd></div><div><dt>Что сделано</dt><dd>Интерфейс, заявки и личный кабинет.</dd></div><div><dt>Формат</dt><dd>Личный проект.</dd></div></dl><div class="project-footer"><span>HTML / CSS / JS / база данных</span><a href="https://vanek2111.github.io/vanekdev/detailing/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a></div></article>
+<article class="project active" data-project="1" id="psychologist"><div class="project-meta"><span>02 / WEBSITE + AUTOMATION</span><span>САЙТ ПСИХОЛОГА</span></div><div class="project-title"><h3>Психолог</h3><a href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт психолога">↗</a></div><a class="project-visual" href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer"><img src="assets/psychologist-cover.webp" alt="Обложка сайта психолога: кресло, керамика и спокойная композиция" width="1536" height="1024" loading="lazy"></a><div class="project-description"><h4>Тихое место. Прямая связь.</h4><p>Сайт для психолога Елизаветы Золотовой. Собрал сайт с AI-инструментами, настроил форму записи и передачу заявок в Telegram через n8n.</p></div><dl class="case-facts"><div><dt>Задача</dt><dd>Помочь выбрать формат и записаться.</dd></div><div><dt>Что сделано</dt><dd>Сайт, форма и передача заявок в Telegram.</dd></div><div><dt>Автоматизация</dt><dd>Форма → n8n → Telegram.</dd></div></dl><div class="project-footer"><span>Формы / n8n / Telegram</span><a href="https://vanek2111.github.io/sitepsy/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a></div></article>
+<article class="project active" data-project="2" id="exotech"><div class="project-meta"><span>03 / E-COMMERCE</span><span>УЧЕБНЫЙ ПРОЕКТ</span></div><div class="project-title"><h3>ExoTech</h3><a href="https://vanek2111.github.io/vanek-shop/" target="_blank" rel="noopener noreferrer" aria-label="Открыть демо ExoTech">↗</a></div><a class="project-visual" href="https://vanek2111.github.io/vanek-shop/" target="_blank" rel="noopener noreferrer"><img src="assets/exotech-cover.webp" alt="Обложка ExoTech: клавиатура, мышь и наушники" width="1536" height="1024" loading="lazy"></a><div class="project-description"><h4>Игровая периферия. Весь путь заказа.</h4><p>Каталог с фильтрами, страницы товаров, корзина и личный кабинет. База данных хранит аккаунты и заказы. Учебное демо без онлайн-оплаты.</p></div><dl class="case-facts"><div><dt>Задача</dt><dd>Выбор периферии и сбор заказа.</dd></div><div><dt>Что сделано</dt><dd>Каталог, фильтры, корзина и кабинет.</dd></div><div><dt>Формат</dt><dd>Учебное демо без реальной оплаты.</dd></div></dl><div class="project-footer"><span>HTML / CSS / JS / база данных</span><a href="https://vanek2111.github.io/vanek-shop/" target="_blank" rel="noopener noreferrer">Открыть демо ↗</a></div></article>
+</div>
+<div class="project-controls" aria-label="Выбрать проект"><button type="button" data-go="0" aria-label="Проект FORMA" aria-pressed="true"><span>01</span> FORMA</button><button type="button" data-go="1" aria-label="Проект Психолог" aria-pressed="false"><span>02</span> ПСИХОЛОГ</button><button type="button" data-go="2" aria-label="Проект ExoTech" aria-pressed="false"><span>03</span> EXOTECH</button><div class="track" aria-hidden="true"><span></span></div></div>
+</div>
+</section>
+<section class="about about-street" id="about" aria-labelledby="about-title">
+<div class="street-top"><span>ИВАН / ЛИЧНЫЙ ПРОФИЛЬ</span><span>03 — ОБО МНЕ</span></div>
+<h2 id="about-title" class="street-title">СВОЙ<br>ПОДХОД<span>.</span></h2>
+<div class="street-stamp">ВЕБ / АВТОМАТИЗАЦИЯ</div>
+<p class="street-lead">Собираю сайты.<br>Соединяю сервисы.<br><strong>Разбираюсь, как всё работает.</strong></p>
+<p class="street-bio">Я Иван. Изучаю веб-разработку и автоматизацию на личных и учебных проектах. Работаю с HTML, CSS, JavaScript, формами, API и данными. Подбираю инструменты под задачу, использую AI-инструменты и проверяю результат.</p>
+<div class="street-skills" aria-label="Инструменты и навыки"><span>HTML / CSS</span><span>JavaScript</span><span>n8n / API</span><span>Telegram</span><span>база данных</span><span>таблицы</span></div>
+<a class="street-contact" href="#contact">ЕСТЬ ЗАДАЧА? ОБСУДИМ <span>↗</span></a>
+</section>
+</div></div><section class="contact" id="contact" aria-labelledby="contact-title"><div class="section-line reveal"><h2 id="contact-title">КОНТАКТ<span> / CONNECT</span></h2><span>&lt;/portfolio&gt;</span></div><div class="contact-main reveal"><h3>ЕСТЬ<br><span>ЗАДАЧА?</span></h3><div class="contact-links"><p>Расскажите, какой сайт или сценарий нужен.<br>Обсудим объём работы и стоимость.</p><a class="glitch" aria-label="Написать в Telegram" href="https://t.me/na_svyazi_q" target="_blank" rel="noopener noreferrer" data-text="TELEGRAM ↗">TELEGRAM <span>↗</span></a><a class="glitch email" aria-label="Написать на Email" href="mailto:vanya11222@mail.ru" data-text="EMAIL ↗">EMAIL <span>↗</span></a><span class="email-address">vanya11222@mail.ru</span></div></div></section>
+</main><footer><button class="background-toggle" type="button" aria-controls="city-background" aria-pressed="false" hidden>Фон: пауза</button><a class="brand" href="#home">{ v }</a><span>Иван / веб-разработка и автоматизация</span><a href="#home">Наверх ↑</a></footer>
+</body></html>

@@ -10,3 +10,6 @@ Generated images are concept visuals, not documentary photographs of a real FORM
 - `assets/polish-comparison.webp` — legacy image from Le Perfectionniste, Metz (Nietzsche92 / Wikimedia Commons, CC BY-SA 4.0). No longer used on the page.
 
 The Pexels and Unsplash licenses permit use in this project. Their photographers and depicted studios are not affiliated with or endorsing FORMA.
+
+## Motion background
+`assets/polishing-film.mp4`: Pavel Danilyuk / Pexels, https://www.pexels.com/video/polishing-a-car-6161632/ — Pexels License https://www.pexels.com/license/. Trimmed to 12 seconds, muted, resized for web. Decorative stock footage; not presented as studio project documentation.

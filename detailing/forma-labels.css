@@ -1,0 +1,14 @@
+/* Quiet service captions, retaining FORMA’s original headings and hero signature. */
+.workflow-track .flow-index{font:400 12px/1.5 var(--sans);color:#aaa9a4;letter-spacing:.01em;text-transform:none}
+.material-card-top span:first-child{font:400 11px/1.5 var(--sans);letter-spacing:.01em;text-transform:none;color:#aaa9a4}
+.gallery-image>span{font:400 11px/1.5 var(--sans);letter-spacing:.01em;text-transform:none}
+@media(max-width:640px){.workflow-track .flow-index{font-size:10px}.material-card-top span:first-child,.gallery-image>span{font-size:10px}}
+/* Readability pass, retaining the approved display font and four-stage layout. */
+.main-nav a{font-size:12px;min-height:44px;display:inline-flex;align-items:center}
+.service-desc,.section-intro,.workflow-top>p,.workflow-track p{font-size:13px;line-height:1.8;color:#b9b8b2}
+.workflow-track h3{font-size:22px;line-height:1.2}.workflow-track article{padding-top:30px;padding-bottom:32px}
+.gallery-card figcaption>p,.material-card>p,.booking-lead{font-size:13px;line-height:1.85;color:#b9b8b2}
+.button{font-size:12px;min-height:48px}.booking-form label{font-size:12px}.booking-form input,.booking-form textarea,.booking-form select{font-size:14px;min-height:46px}
+.booking-form>small{font-size:11px;line-height:1.7}.form-status{font-size:12px;line-height:1.7}
+.hero-lead{font-size:15px;line-height:1.8}.services-note{font-size:12px}.comparison-label{font-size:11px}
+@media(max-width:640px){.workflow-track p{font-size:12px}.workflow-track h3{font-size:19px}.workflow-track article{min-height:220px}.service-desc{font-size:12px}.hero-lead{font-size:14px}.gallery-card figcaption>p,.material-card>p{font-size:13px}}

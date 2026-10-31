@@ -12,7 +12,7 @@ const BASE = (process.env.APP_BASE || '/vanekdev/detailing').replace(/\/$/, '') 
 const PORT = Number(process.env.PORT || 8787);
 const DB_FILE = process.env.FORMA_DB_PATH || path.join(ROOT, 'data', 'forma.sqlite');
 const SESSION_DAYS = 7;
-const MIME = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.webp':'image/webp'};
+const MIME = {'.mp4':'video/mp4','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.webp':'image/webp'};
 
 await mkdir(path.dirname(DB_FILE), {recursive:true});
 const db = new DatabaseSync(DB_FILE);
