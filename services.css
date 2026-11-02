@@ -12,3 +12,54 @@
 .services-link{display:inline-flex;gap:35px;margin-top:18px;padding-bottom:8px;border-bottom:2px solid var(--red)}
 @media(max-width:700px){.services{padding:40px 20px 50px}.services-lead{margin-top:30px}.service-row{grid-template-columns:26px minmax(0,1fr);gap:12px;padding:24px 0}.service-price{grid-column:2}.services-intro,.service-row p{font-size:13px}.nav nav{gap:12px}.nav nav a{font-size:10px}.nav .brand{gap:10px}}
 @media(max-width:420px){.nav{flex-wrap:wrap;height:auto;min-height:78px;gap:12px;padding-top:12px;padding-bottom:12px}.nav nav{order:3;width:100%;justify-content:space-between}.services .section-line h2{font-size:12px}}
+
+.project-footer .case-link{white-space:nowrap}.project-footer:has(.case-link){flex-wrap:wrap}
+
+/* Labelled actions replace repeated arrow ornaments. */
+.project-footer>a{display:flex!important;align-items:center;justify-content:space-between;gap:20px;background:transparent!important;border:1px solid #555!important;border-left:3px solid var(--red)!important;padding:14px 18px!important;transition:background .2s,border-color .2s}
+.project-footer>a::after{content:'LIVE';font:9px var(--mono);color:#b6b6b6;letter-spacing:.08em}
+.project-footer>a.case-link::after{content:'CASE'}
+.project-footer>a:hover,.project-footer>a:focus-visible{background:#242020!important;border-color:var(--red)!important}
+.project-footer>a::before{content:none!important}
+.project-title{padding-right:0}
+.text-link span:empty,.hero-right>a span:empty,.street-contact span:empty,.services-link span:empty,.glitch span:empty{display:none}
+.glitch::before,.glitch::after{content:none!important}
+.services-link,.text-link{transition:border-color .2s}.services-link:hover,.text-link:hover{border-bottom-color:#fff}
+
+/* Quiet the repeated decoration while preserving all text and the character motion. */
+.project-footer>a::after{content:none!important}
+.project-footer>a{border:0!important;border-bottom:1px solid #555!important;padding:12px 0!important;justify-content:flex-start;background:transparent!important}
+.project-footer>a:hover,.project-footer>a:focus-visible{background:transparent!important;border-bottom-color:var(--red)!important}
+.project-footer>a.case-link{color:#fff!important}.project-footer>a:not(.case-link){color:#b6b6b6!important}
+.project-visual,.js .project-visual{border:0!important}
+.project{border-left:0!important;border-right:0!important}
+.person-label{border:0;background:transparent;padding-left:0}
+.selection{border-color:transparent!important}.corner{display:none}
+.hero-intro .bracket{font-size:30px;opacity:.45}
+.street-stamp{box-shadow:none!important;border:0!important}
+.project-meta{border-bottom:0}.project-title>a{border:0!important}
+
+/* Restore the original contact hover and give project actions a clear target. */
+.contact .glitch::before,.contact .glitch::after{content:attr(data-text)!important}
+.project .project-footer,.js .project .project-footer{display:flex!important;flex-direction:row!important;justify-content:flex-start!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important}
+.project .project-footer>span{flex-basis:100%;margin-bottom:8px}
+.project .project-footer>a,.js .project .project-footer>a{display:inline-flex!important;justify-content:center!important;align-items:center!important;min-height:54px!important;padding:15px 25px!important;font:500 15px/1.35 Inter,Arial,sans-serif!important;border:1px solid #777!important;color:#fff!important;background:#181818!important;margin:0!important;min-width:175px!important;transition:background .2s,border-color .2s,color .2s!important}
+.project .project-footer>a.case-link,.js .project .project-footer>a.case-link{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.project .project-footer>a:hover,.project .project-footer>a:focus-visible{border-color:#fff!important;background:#303030!important}
+.project .project-footer>a.case-link:hover,.project .project-footer>a.case-link:focus-visible{background:#a9344c!important;border-color:#a9344c!important}
+@media(max-width:600px){.project .project-footer>a{flex:1 1 170px!important;min-width:0!important;font-size:14px!important}}
+@media(max-width:700px){
+ .project .project-footer,.js .project .project-footer{gap:10px!important}
+ .project .project-footer>a,.js .project .project-footer>a{flex:1 1 100%!important;min-width:0!important;min-height:50px!important;font-size:15px!important;padding:14px 18px!important;text-align:center;white-space:normal}
+ .project-description h4{overflow-wrap:break-word}
+ .case-facts>div{grid-template-columns:85px minmax(0,1fr)}
+ .case-facts dd{overflow-wrap:break-word}
+ .services .section-line{flex-wrap:wrap}
+ .service-price{white-space:normal}
+ .contact .glitch{min-height:58px}
+ .nav nav a{display:inline-flex;align-items:center;min-height:44px}
+ .nav{height:auto;min-height:78px;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+ .nav nav{order:3;width:100%;justify-content:space-between;gap:8px}
+ .nav nav a{font-size:12px}
+ .nav .language-switch button{min-width:40px;min-height:40px}
+}
