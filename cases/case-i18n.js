@@ -100,6 +100,7 @@ const caseTranslations = {
   "к обращению.": "to an enquiry.",
   "сразу знать, что написать.": "to know what to write straight away."
 };
+Object.assign(caseTranslations, {"Отзыв клиента": "Client feedback", "Всё замечательно, сайт мне очень понравился. Иван сделал его быстро, результатом довольна.": "Everything is great, I really liked the website. Ivan completed it quickly, and I am happy with the result.", "Елизавета Золотова, психолог": "Elizaveta Zolotova, psychologist"});
 (() => {
  const nodes=[], attributes=[];
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);

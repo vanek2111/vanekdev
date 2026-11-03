@@ -62,3 +62,10 @@ body>header,body>footer{padding:22px 32px}
 .case-language button{min-width:42px;min-height:44px;background:transparent;border:0;padding:10px 6px;color:#b6b6b6;font:inherit}
 .case-language button[aria-pressed=true]{color:#fff;background:transparent;box-shadow:inset 0 -2px #f04452}
 @media(max-width:700px){header{display:flex;flex-wrap:wrap;gap:10px}.case-language{margin-left:auto}.intro h1{overflow-wrap:anywhere}}
+
+.client-review{padding:32px;border-top:1px solid #333;margin-bottom:25px}
+.client-review blockquote{margin:0;max-width:760px}
+.client-review blockquote>p{font-size:clamp(20px,2.3vw,28px);line-height:1.5;color:#fff!important;letter-spacing:-.02em}
+.client-review blockquote footer{border:0;padding:0;margin-top:20px;display:block}
+.client-review cite{font-style:normal;font-size:13px;color:#b6b6b6}
+@media(max-width:700px){.client-review{padding:26px 20px}.client-review blockquote>p{font-size:21px}}
