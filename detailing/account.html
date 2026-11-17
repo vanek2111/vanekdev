@@ -7,6 +7,7 @@
   <meta name="description" content="Вход в личный кабинет FORMA Detail Studio.">
   <title>Личный кабинет — FORMA Detail Studio</title>
   <link rel="stylesheet" href="style.css?v=forma-headline-arrow-fix-2">
+  <link rel="stylesheet" href="demo.css?v=1">
 </head>
 <body class="account-page">
   <header class="site-header">
@@ -24,6 +25,7 @@
           <div class="register-only" hidden><label for="auth-phone">Телефон</label><input id="auth-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" maxlength="18" aria-describedby="phone-hint"><small id="phone-hint" class="field-hint">Российский номер: 10 цифр после +7</small></div>
           <label for="auth-password">Пароль</label><input id="auth-password" type="password" name="password" autocomplete="current-password" placeholder="Не менее 10 символов" required>
           <button class="button button-gold" id="auth-submit" type="submit">Войти <span><svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></span></button>
+          <a class="demo-entry" href="demo.html">Посмотреть демо кабинета ↗<small>Без регистрации · вымышленные автомобили и записи</small></a>
           <p class="auth-status" id="auth-status" role="status" aria-live="polite"></p>
           <small id="auth-hint">Войдите, чтобы увидеть данные своего автомобиля.</small>
         </form>

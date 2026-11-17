@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Демонстрационный кабинет FORMA. Вымышленные автомобили, статусы записей и история обслуживания без регистрации.">
+  <title>Демо кабинета — FORMA Detail Studio</title>
+  <link rel="stylesheet" href="style.css?v=forma-headline-arrow-fix-2">
+  <link rel="stylesheet" href="demo.css?v=1">
+</head>
+<body class="account-page demo-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="FORMA — на главную"><span class="brand-mark">F</span><span>FORMA<span class="brand-sub">AUTOMOTIVE CARE</span></span></a>
+    <a class="header-account" href="index.html">На главную <span><svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a>
+  </header>
+  <main class="account-main"><aside class="demo-notice"><strong>Демонстрационный кабинет.</strong> Все автомобили и записи вымышлены. Можно переключать разделы; заявки не отправляются, данные не сохраняются.</aside>
+    <section class="portal-section" id="portal-section">
+      <div class="portal-heading"><div><p class="eyebrow" id="portal-kicker">ЛИЧНЫЙ КАБИНЕТ</p><h1 id="portal-title">Здравствуйте, Алексей</h1><p id="portal-description">Пример кабинета клиента: два автомобиля, текущие работы и история обслуживания.</p></div><div class="portal-actions"><span class="role-badge" id="role-badge">ДЕМО / КЛИЕНТ</span><a class="outline-button" href="account.html">Вернуться ко входу ↗</a></div></div>
+      <div class="portal-tabs"><button class="portal-tab active" data-portal-view="overview">Обзор</button><button class="portal-tab" data-portal-view="cars">Автомобили</button><button class="portal-tab" data-portal-view="requests">Записи и заказы</button></div>
+      <div class="portal-view" id="portal-overview"><div class="portal-grid"><section class="portal-panel"><div class="panel-heading"><h2>Мои автомобили</h2><button class="text-button" data-open-view="cars">Все автомобили <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></button></div><div id="overview-cars" class="portal-list"></div></section><section class="portal-panel"><div class="panel-heading"><h2>Последние записи</h2><button class="text-button" data-open-view="requests">Вся история <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></button></div><div id="overview-bookings" class="portal-list"></div></section><section class="portal-panel portal-wide"><div class="panel-heading"><div><p class="eyebrow">ЗАПИСАТЬСЯ В СТУДИЮ</p><h2>Что сделаем с автомобилем?</h2></div></div><p class="demo-explainer">В настоящем кабинете здесь можно выбрать автомобиль, услугу и желаемую дату. В демо отправка отключена. <a href="account.html">Перейти ко входу</a></p></section></div></div>
+      <div class="portal-view" id="portal-cars" hidden><section class="portal-panel"><div class="panel-heading"><div><p class="eyebrow">ПРОФИЛЬ АВТОМОБИЛЯ</p><h2>Мои автомобили</h2></div></div><div class="portal-list" id="cars-list"></div><p class="demo-explainer" style="margin-top:24px">Это примеры автомобилей. Добавление и сохранение доступны в настоящем кабинете после входа.</p></section></div>
+      <div class="portal-view" id="portal-requests" hidden><section class="portal-panel"><div class="panel-heading"><div><p class="eyebrow">ИСТОРИЯ ОБСЛУЖИВАНИЯ</p><h2>Записи и заказы</h2></div></div><div id="all-bookings" class="portal-list"></div></section></div>
+      <p class="portal-status" id="global-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">F</span><span>FORMA<span class="brand-sub">AUTOMOTIVE CARE</span></span></a><span>ЛИЧНЫЙ КАБИНЕТ</span><a href="index.html">НА ГЛАВНУЮ <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></a></footer>
+  <script src="demo.js?v=1" defer></script>
+</body>
+</html>
